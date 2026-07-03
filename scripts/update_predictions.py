@@ -158,10 +158,17 @@ def main():
             (df.date >= WC_START)]
     all_teams = {t:g for g,ts in GROUPS.items() for t in ts}
     results = []
+    skipped = []
     for r in wc.itertuples():
         if r.home_team in all_teams and r.away_team in all_teams:
-            results.append({"g":all_teams[r.home_team],"home":r.home_team,"away":r.away_team,
+            gh, ga = all_teams[r.home_team], all_teams[r.away_team]
+            if gh != ga:
+                skipped.append((r.home_team, r.away_team, str(r.tournament), str(r.date.date())))
+                continue
+            results.append({"g":gh,"home":r.home_team,"away":r.away_team,
               "hs":int(r.home_score),"as":int(r.away_score),"date":str(r.date.date())})
+    if skipped:
+        print(f"Skipped {len(skipped)} group-mismatched rows: {skipped[:10]}")
 
     # standings
     standings = {}
