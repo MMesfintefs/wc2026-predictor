@@ -165,4 +165,161 @@ def rolling(t,hist,today):
             min((today-hh[-1]["date"]).days,30))
 
 def player_data():
-    if not(os.getenv("KAGGLE_USERNAME") and os.getenv("KAGGLE_KEY")): return
+    if not(os.getenv("KAGGLE_USERNAME") and os.getenv("KAGGLE_KEY")): return {},{},"skipped — no Kaggle creds"
+    try:
+        subprocess.run(["kaggle","datasets","download","swaptr/fifa-wc-2026-players",
+                        "-p","data/players","--unzip","-q"],check=True,timeout=300)
+        pen,scorers={},{}
+        for f in os.listdir("data/players"):
+            if not f.endswith(".csv"): continue
+            d=pd.read_csv(f"data/players/{f}")
+            cols={c.lower():c for c in d.columns}
+            tc=next((cols[k] for k in("team","country","nationality","nation") if k in cols),None)
+            nc=next((cols[k] for k in("player","name","player_name","full_name") if k in cols),None)
+            gc=next((cols[k] for k in cols if "goal" in k and "against" not in k),None)
+            ic=next((cols[k] for k in cols if "injur" in k or "status" in k),None)
+            rc=next((cols[k] for k in cols if "red" in k),None)
+            if not tc: continue
+            for _,row in d.iterrows():
+                t=NAME_FIX.get(str(row[tc]),str(row[tc]))
+                if t not in ALL_TEAMS: continue
+                p=0
+                if ic and isinstance(row.get(ic),str) and any(w in row[ic].lower() for w in("injur","out","doubt")): p+=15
+                if rc and pd.notna(row.get(rc)) and float(row.get(rc) or 0)>=1: p+=10
+                if p: pen[t]=min(pen.get(t,0)+p,60)
+                if nc and gc and pd.notna(row.get(gc)) and float(row.get(gc) or 0)>0:
+                    scorers.setdefault(t,[]).append((str(row[nc]),float(row[gc])))
+        for t in scorers: scorers[t]=sorted(scorers[t],key=lambda x:-x[1])[:6]
+        return pen,scorers,f"applied to {len(pen)} teams; scorer data for {len(scorers)} teams"
+    except Exception as e: return {},{},f"failed ({type(e).__name__})"
+
+def main():
+    df,fd_note=load(); xf=load_xg()
+    elo,hist,X,y,dts,XP,yP=build(df,xf)
+    tr=(dts<TRAIN_UNTIL).values; te=((dts>=WC_GROUP_START)&(dts<=WC_GROUP_END)).values
+    def brier(p,yt):
+        oh=np.zeros_like(p); oh[np.arange(len(yt)),yt]=1; return float(np.mean(np.sum((p-oh)**2,1)))
+    cands={
+      "LogisticRegression":make_pipeline(StandardScaler(),LogisticRegression(max_iter=2000,C=0.5)),
+      "RandomForest":RandomForestClassifier(n_estimators=400,min_samples_leaf=25,random_state=0),
+      "GradientBoosting":GradientBoostingClassifier(random_state=0),
+      "LDA":make_pipeline(StandardScaler(),LinearDiscriminantAnalysis()),
+      "KNN(k=75)":make_pipeline(StandardScaler(),KNeighborsClassifier(n_neighbors=75,weights="distance")),
+      "SVM-RBF":make_pipeline(StandardScaler(),SVC(probability=True,C=1.0,random_state=0)),
+      "NeuralNet-MLP":make_pipeline(StandardScaler(),MLPClassifier(hidden_layer_sizes=(32,16),
+        max_iter=800,early_stopping=True,random_state=0)),
+    }
+    comp,fitted=[],{}
+    for name,m in cands.items():
+        m.fit(X[tr],y[tr]); p=m.predict_proba(X[te])
+        comp.append({"model":name,"holdout_matches":int(te.sum()),
+          "accuracy":round(accuracy_score(y[te],p.argmax(1))*100,1),
+          "log_loss":round(log_loss(y[te],p,labels=[0,1,2]),4),"brier":round(brier(p,y[te]),4)})
+        fitted[name]=m
+    trP,_=np.repeat(tr,2),np.repeat(te,2)
+    pr=PoissonRegressor(alpha=0.5,max_iter=1000).fit(XP[trP],yP[trP])
+    idx=np.where(te)[0]; probsP=[]
+    for i in idx:
+        lh=max(.2,pr.predict(XP[2*i:2*i+1])[0]); la=max(.2,pr.predict(XP[2*i+1:2*i+2])[0])
+        M=np.outer([pois.pmf(k,lh) for k in range(9)],[pois.pmf(k,la) for k in range(9)])
+        probsP.append([np.triu(M,1).sum(),np.trace(M),np.tril(M,-1).sum()])
+    pP=np.array(probsP)
+    comp.append({"model":"PoissonGoals(ref)","holdout_matches":int(te.sum()),
+      "accuracy":round(accuracy_score(y[te],pP.argmax(1))*100,1),
+      "log_loss":round(log_loss(y[te],pP,labels=[0,1,2]),4),"brier":round(brier(pP,y[te]),4)})
+    best=min([c for c in comp if "ref" not in c["model"]],key=lambda c:c["log_loss"])
+    model=fitted[best["model"]]; model.fit(X,y)
+    pr.fit(XP,yP)
+    pen,scorers,pen_note=player_data()
+    eloA={t:elo.get(t,1500)-pen.get(t,0) for t in ALL_TEAMS}
+    today=pd.Timestamp.now()
+
+    def P(a,b):
+        fa,fb=rolling(a,hist,today),rolling(b,hist,today)
+        xga_,xgaa_=xg_at(xf,a,today); xgb_,xgab_=xg_at(xf,b,today)
+        row=[[eloA[a]-eloA[b],fa[0]-fb[0],fa[1]-fb[1],fa[2]-fb[2],fa[3]-fb[3],
+              fa[4]-fb[4],fa[5]-fb[5],xga_-xgb_,xgaa_-xgab_]]
+        pl,pd_,pw=model.predict_proba(row)[0]; tot=pw+pl
+        return round((pw+pd_*pw/tot)*100,1),round((pl+pd_*pl/tot)*100,1)
+
+    def detail(a,b):
+        fa,fb=rolling(a,hist,today),rolling(b,hist,today)
+        xga_,xgaa_=xg_at(xf,a,today); xgb_,xgab_=xg_at(xf,b,today)
+        lh=max(.2,pr.predict([[eloA[a]-eloA[b],fa[2],fb[3],xga_,xgab_]])[0])
+        la=max(.2,pr.predict([[eloA[b]-eloA[a],fb[2],fa[3],xgb_,xgaa_]])[0])
+        M=np.outer([pois.pmf(k,lh) for k in range(7)],[pois.pmf(k,la) for k in range(7)])
+        M/=M.sum()
+        top=sorted([(h,aa,float(M[h,aa])) for h in range(7) for aa in range(7)],key=lambda x:-x[2])[:6]
+        def sc(team,lam):
+            out=[]
+            for name,g in scorers.get(team,[]):
+                tot=sum(x[1] for x in scorers.get(team,[])) or 1
+                out.append({"player":name,"pScore":round((1-math.exp(-lam*g/tot))*100,1)})
+            return out
+        return {"xgHome":round(float(lh),2),"xgAway":round(float(la),2),
+          "topScorelines":[{"h":h,"a":aa,"p":round(p*100,1)} for h,aa,p in top],
+          "over25":round(float(sum(M[h,aa] for h in range(7) for aa in range(7) if h+aa>=3))*100,1),
+          "btts":round(float(sum(M[h,aa] for h in range(1,7) for aa in range(1,7)))*100,1),
+          "scorersHome":sc(a,lh),"scorersAway":sc(b,la),
+          "eloHome":round(eloA[a]),"eloAway":round(eloA[b]),
+          "formHome":round(rolling(a,hist,today)[0],3),"formAway":round(rolling(b,hist,today)[0],3)}
+
+    wc=df[(df.date>=WC_GROUP_START)&(df.date<=WC_GROUP_END)&
+          (df.home_team.isin(ALL_TEAMS))&(df.away_team.isin(ALL_TEAMS))]
+    standings={}
+    for g,teams in GROUPS.items():
+        s={t:{"mp":0,"pts":0,"gf":0,"ga":0} for t in teams}
+        for r in wc.itertuples():
+            if r.home_team in teams and r.away_team in teams:
+                h,a,hs,as_=r.home_team,r.away_team,int(r.home_score),int(r.away_score)
+                s[h]["mp"]+=1;s[a]["mp"]+=1;s[h]["gf"]+=hs;s[h]["ga"]+=as_;s[a]["gf"]+=as_;s[a]["ga"]+=hs
+                s[h]["pts"]+=3 if hs>as_ else 1 if hs==as_ else 0
+                s[a]["pts"]+=3 if as_>hs else 1 if hs==as_ else 0
+        order=sorted(teams,key=lambda t:(s[t]["pts"],s[t]["gf"]-s[t]["ga"],s[t]["gf"],eloA[t]),reverse=True)
+        standings[g]=[{"team":t,**s[t],"gd":s[t]["gf"]-s[t]["ga"],"elo":round(eloA[t])} for t in order]
+
+    def enrich(m):
+        if m["home"] and m["away"]:
+            m["detail"]=detail(m["home"],m["away"])
+            if not winner_of(m):
+                m["pHome"],m["pAway"]=P(m["home"],m["away"])
+                m["predicted"]=m["home"] if m["pHome"]>=m["pAway"] else m["away"]
+            else: m["winner"]=winner_of(m)
+        return m
+    pool={}
+    r32=[enrich(dict(m)) for m in R32]
+    for m in r32: pool[m["id"]]=m.get("winner") or m.get("predicted")
+    def rnd(feeds):
+        out=[]
+        for mid,f1,f2,date in feeds:
+            m=enrich({"id":mid,"date":date,"home":pool.get(f1),"away":pool.get(f2),"status":"SCHEDULED"})
+            pool[mid]=m.get("winner") or m.get("predicted"); out.append(m)
+        return out
+    r16=rnd(R16_FEEDS); qf=rnd(QF_FEEDS); sf=rnd(SF_FEEDS); fin=rnd([FN_FEED])[0]
+
+    champs={}
+    for _ in range(5000):
+        w={}
+        for m in R32:
+            act=winner_of(m)
+            if act: w[m["id"]]=act
+            else:
+                ph,pa=P(m["home"],m["away"]); w[m["id"]]=m["home"] if np.random.rand()<ph/(ph+pa) else m["away"]
+        for feeds in (R16_FEEDS,QF_FEEDS,SF_FEEDS,[FN_FEED]):
+            for mid,f1,f2,_ in feeds:
+                A,B=w[f1],w[f2]; ph,pa=P(A,B)
+                w[mid]=A if np.random.rand()<ph/(ph+pa) else B
+        champs[w[104]]=champs.get(w[104],0)+1
+    champ_probs={k:round(v/50,1) for k,v in sorted(champs.items(),key=lambda x:-x[1])}
+
+    json.dump({"generated_at":datetime.now(timezone.utc).isoformat(),
+      "methodology":{"candidates_compared":comp,"selected_model":best["model"],
+        "selection_rule":"lowest log-loss on 2026 WC group-stage holdout",
+        "features":FEATS,"train_window":f"{TRAIN_FROM} → {TRAIN_UNTIL}",
+        "player_adjustment":pen_note,"football_data_org":fd_note,
+        "statsbomb_xg":"loaded" if xf is not None else "not present"},
+      "standings":standings,"bracket":{"r32":r32,"r16":r16,"qf":qf,"sf":sf,"final":fin},
+      "champion_probs":champ_probs},open(OUT,"w"),indent=1)
+    print("OK | best:",best["model"],best["log_loss"])
+
+if __name__=="__main__": main()
