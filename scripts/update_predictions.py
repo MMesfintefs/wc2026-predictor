@@ -1,11 +1,13 @@
-"""WC2026 Predictor v3 — model zoo + match detail + football-data.org autofill."""
+"""WC2026 Predictor v4 — fixed Poisson xG, expanded model zoo (trees/bagging/XGB/ensemble)."""
 import json, math, os, subprocess
 from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
 import requests
 from sklearn.linear_model import LogisticRegression, PoissonRegressor
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.ensemble import (RandomForestClassifier, GradientBoostingClassifier,
+    ExtraTreesClassifier, BaggingClassifier, HistGradientBoostingClassifier, VotingClassifier)
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
@@ -14,6 +16,11 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, log_loss
 from scipy.stats import poisson as pois
+try:
+    from xgboost import XGBClassifier
+    HAS_XGB=True
+except Exception:
+    HAS_XGB=False
 
 RESULTS_URL="https://raw.githubusercontent.com/martj42/international_results/master/results.csv"
 TRAIN_FROM,TRAIN_UNTIL="2016-01-01","2026-06-01"
@@ -61,7 +68,6 @@ def winner_of(m):
         if m["score"][0]<m["score"][1]: return m["away"]
     return None
 
-# ── football-data.org autofill (optional, FOOTBALL_DATA_TOKEN secret) ──
 def fd_results():
     tok=os.getenv("FOOTBALL_DATA_TOKEN")
     if not tok: return [],"skipped — no FOOTBALL_DATA_TOKEN secret"
@@ -199,16 +205,33 @@ def main():
     tr=(dts<TRAIN_UNTIL).values; te=((dts>=WC_GROUP_START)&(dts<=WC_GROUP_END)).values
     def brier(p,yt):
         oh=np.zeros_like(p); oh[np.arange(len(yt)),yt]=1; return float(np.mean(np.sum((p-oh)**2,1)))
+
+    # ── MODEL ZOO (v4: + ExtraTrees, BaggedTrees, HistGB, XGBoost, soft-voting Ensemble) ──
     cands={
       "LogisticRegression":make_pipeline(StandardScaler(),LogisticRegression(max_iter=2000,C=0.5)),
-      "RandomForest":RandomForestClassifier(n_estimators=400,min_samples_leaf=25,random_state=0),
-      "GradientBoosting":GradientBoostingClassifier(random_state=0),
       "LDA":make_pipeline(StandardScaler(),LinearDiscriminantAnalysis()),
+      "RandomForest":RandomForestClassifier(n_estimators=600,min_samples_leaf=20,
+          max_features="sqrt",random_state=0,n_jobs=-1),
+      "ExtraTrees":ExtraTreesClassifier(n_estimators=600,min_samples_leaf=20,
+          max_features="sqrt",random_state=0,n_jobs=-1),
+      "BaggedTrees":BaggingClassifier(estimator=DecisionTreeClassifier(min_samples_leaf=15),
+          n_estimators=300,max_samples=0.8,random_state=0,n_jobs=-1),
+      "GradientBoosting":GradientBoostingClassifier(random_state=0),
+      "HistGradBoost":HistGradientBoostingClassifier(learning_rate=0.05,max_iter=400,
+          l2_regularization=1.0,early_stopping=True,random_state=0),
       "KNN(k=75)":make_pipeline(StandardScaler(),KNeighborsClassifier(n_neighbors=75,weights="distance")),
       "SVM-RBF":make_pipeline(StandardScaler(),SVC(probability=True,C=1.0,random_state=0)),
       "NeuralNet-MLP":make_pipeline(StandardScaler(),MLPClassifier(hidden_layer_sizes=(32,16),
-        max_iter=800,early_stopping=True,random_state=0)),
+          max_iter=800,early_stopping=True,random_state=0)),
     }
+    if HAS_XGB:
+        cands["XGBoost"]=XGBClassifier(n_estimators=500,learning_rate=0.05,max_depth=4,
+            subsample=0.8,colsample_bytree=0.8,reg_lambda=2.0,objective="multi:softprob",
+            eval_metric="mlogloss",random_state=0,n_jobs=-1)
+    ens_members=[("lr",cands["LogisticRegression"]),("lda",cands["LDA"]),("hgb",cands["HistGradBoost"])]
+    if HAS_XGB: ens_members.append(("xgb",cands["XGBoost"]))
+    cands["Ensemble(soft-vote)"]=VotingClassifier(estimators=[(n,m) for n,m in ens_members],voting="soft")
+
     comp,fitted=[],{}
     for name,m in cands.items():
         m.fit(X[tr],y[tr]); p=m.predict_proba(X[te])
@@ -216,8 +239,11 @@ def main():
           "accuracy":round(accuracy_score(y[te],p.argmax(1))*100,1),
           "log_loss":round(log_loss(y[te],p,labels=[0,1,2]),4),"brier":round(brier(p,y[te]),4)})
         fitted[name]=m
-    trP,_=np.repeat(tr,2),np.repeat(te,2)
-    pr=PoissonRegressor(alpha=0.5,max_iter=1000).fit(XP[trP],yP[trP])
+
+    # ── FIXED Poisson goals model: scaled pipeline, lighter alpha ──
+    pr=make_pipeline(StandardScaler(),PoissonRegressor(alpha=0.05,max_iter=3000))
+    trP=np.repeat(tr,2)
+    pr.fit(XP[trP],yP[trP])
     idx=np.where(te)[0]; probsP=[]
     for i in idx:
         lh=max(.2,pr.predict(XP[2*i:2*i+1])[0]); la=max(.2,pr.predict(XP[2*i+1:2*i+2])[0])
@@ -227,6 +253,7 @@ def main():
     comp.append({"model":"PoissonGoals(ref)","holdout_matches":int(te.sum()),
       "accuracy":round(accuracy_score(y[te],pP.argmax(1))*100,1),
       "log_loss":round(log_loss(y[te],pP,labels=[0,1,2]),4),"brier":round(brier(pP,y[te]),4)})
+
     best=min([c for c in comp if "ref" not in c["model"]],key=lambda c:c["log_loss"])
     model=fitted[best["model"]]; model.fit(X,y)
     pr.fit(XP,yP)
@@ -252,8 +279,8 @@ def main():
         top=sorted([(h,aa,float(M[h,aa])) for h in range(7) for aa in range(7)],key=lambda x:-x[2])[:6]
         def sc(team,lam):
             out=[]
+            tot=sum(x[1] for x in scorers.get(team,[])) or 1
             for name,g in scorers.get(team,[]):
-                tot=sum(x[1] for x in scorers.get(team,[])) or 1
                 out.append({"player":name,"pScore":round((1-math.exp(-lam*g/tot))*100,1)})
             return out
         return {"xgHome":round(float(lh),2),"xgAway":round(float(la),2),
@@ -261,8 +288,7 @@ def main():
           "over25":round(float(sum(M[h,aa] for h in range(7) for aa in range(7) if h+aa>=3))*100,1),
           "btts":round(float(sum(M[h,aa] for h in range(1,7) for aa in range(1,7)))*100,1),
           "scorersHome":sc(a,lh),"scorersAway":sc(b,la),
-          "eloHome":round(eloA[a]),"eloAway":round(eloA[b]),
-          "formHome":round(rolling(a,hist,today)[0],3),"formAway":round(rolling(b,hist,today)[0],3)}
+          "eloHome":round(eloA[a]),"eloAway":round(eloA[b])}
 
     wc=df[(df.date>=WC_GROUP_START)&(df.date<=WC_GROUP_END)&
           (df.home_team.isin(ALL_TEAMS))&(df.away_team.isin(ALL_TEAMS))]
@@ -281,10 +307,11 @@ def main():
     def enrich(m):
         if m["home"] and m["away"]:
             m["detail"]=detail(m["home"],m["away"])
-            if not winner_of(m):
+            w=winner_of(m)
+            if not w:
                 m["pHome"],m["pAway"]=P(m["home"],m["away"])
                 m["predicted"]=m["home"] if m["pHome"]>=m["pAway"] else m["away"]
-            else: m["winner"]=winner_of(m)
+            else: m["winner"]=w
         return m
     pool={}
     r32=[enrich(dict(m)) for m in R32]
