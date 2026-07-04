@@ -1,65 +1,100 @@
 {
- "generated_at": "2026-07-04T02:51:34.052214+00:00",
+ "generated_at": "2026-07-04T04:34:24.380585+00:00",
  "methodology": {
   "candidates_compared": [
    {
     "model": "LogisticRegression",
-    "holdout_matches": 76,
-    "accuracy": 60.5,
-    "log_loss": 0.9023,
-    "brier": 0.5414
-   },
-   {
-    "model": "RandomForest",
-    "holdout_matches": 76,
-    "accuracy": 56.6,
-    "log_loss": 0.9309,
-    "brier": 0.554
-   },
-   {
-    "model": "GradientBoosting",
-    "holdout_matches": 76,
-    "accuracy": 59.2,
-    "log_loss": 0.9572,
-    "brier": 0.5688
+    "holdout_matches": 102,
+    "accuracy": 62.7,
+    "log_loss": 0.8688,
+    "brier": 0.516
    },
    {
     "model": "LDA",
-    "holdout_matches": 76,
-    "accuracy": 59.2,
-    "log_loss": 0.9016,
-    "brier": 0.5406
+    "holdout_matches": 102,
+    "accuracy": 61.8,
+    "log_loss": 0.8701,
+    "brier": 0.5164
+   },
+   {
+    "model": "RandomForest",
+    "holdout_matches": 102,
+    "accuracy": 59.8,
+    "log_loss": 0.9025,
+    "brier": 0.532
+   },
+   {
+    "model": "ExtraTrees",
+    "holdout_matches": 102,
+    "accuracy": 62.7,
+    "log_loss": 0.9007,
+    "brier": 0.5281
+   },
+   {
+    "model": "BaggedTrees",
+    "holdout_matches": 102,
+    "accuracy": 63.7,
+    "log_loss": 0.9176,
+    "brier": 0.5424
+   },
+   {
+    "model": "GradientBoosting",
+    "holdout_matches": 102,
+    "accuracy": 60.8,
+    "log_loss": 0.9075,
+    "brier": 0.5348
+   },
+   {
+    "model": "HistGradBoost",
+    "holdout_matches": 102,
+    "accuracy": 64.7,
+    "log_loss": 0.9086,
+    "brier": 0.5342
    },
    {
     "model": "KNN(k=75)",
-    "holdout_matches": 76,
-    "accuracy": 53.9,
-    "log_loss": 0.9493,
-    "brier": 0.5663
+    "holdout_matches": 102,
+    "accuracy": 58.8,
+    "log_loss": 0.9222,
+    "brier": 0.5466
    },
    {
     "model": "SVM-RBF",
-    "holdout_matches": 76,
-    "accuracy": 56.6,
-    "log_loss": 0.9159,
-    "brier": 0.5407
+    "holdout_matches": 102,
+    "accuracy": 60.8,
+    "log_loss": 0.8975,
+    "brier": 0.5276
    },
    {
     "model": "NeuralNet-MLP",
-    "holdout_matches": 76,
-    "accuracy": 60.5,
-    "log_loss": 0.9303,
-    "brier": 0.5563
+    "holdout_matches": 102,
+    "accuracy": 61.8,
+    "log_loss": 0.909,
+    "brier": 0.5364
+   },
+   {
+    "model": "XGBoost",
+    "holdout_matches": 102,
+    "accuracy": 51.0,
+    "log_loss": 1.0012,
+    "brier": 0.5828
+   },
+   {
+    "model": "Ensemble(soft-vote)",
+    "holdout_matches": 102,
+    "accuracy": 62.7,
+    "log_loss": 0.8986,
+    "brier": 0.5299
    },
    {
     "model": "PoissonGoals(ref)",
-    "holdout_matches": 76,
-    "accuracy": 27.6,
-    "log_loss": 1.0871,
-    "brier": 0.6593
+    "holdout_matches": 102,
+    "accuracy": 62.7,
+    "log_loss": 0.8642,
+    "brier": 0.5063
    }
   ],
-  "selected_model": "LDA",
+  "selected_model": "LogisticRegression",
   "selection_rule": "lowest log-loss on 2026 WC group-stage holdout",
   "features": [
    "elo_diff",
@@ -74,66 +109,66 @@
   ],
   "train_window": "2016-01-01 \u2192 2026-06-01",
   "player_adjustment": "skipped \u2014 no Kaggle creds",
-  "football_data_org": "skipped \u2014 no FOOTBALL_DATA_TOKEN secret",
+  "football_data_org": "filled 80 finished matches",
   "statsbomb_xg": "loaded"
  },
  "standings": {
   "A": [
    {
     "team": "Mexico",
-    "mp": 3,
-    "pts": 9,
-    "gf": 6,
+    "mp": 5,
+    "pts": 15,
+    "gf": 10,
     "ga": 0,
-    "gd": 6,
-    "elo": 1953
+    "gd": 10,
+    "elo": 2007
    },
    {
     "team": "South Africa",
-    "mp": 3,
-    "pts": 4,
-    "gf": 2,
+    "mp": 4,
+    "pts": 7,
+    "gf": 3,
     "ga": 3,
-    "gd": -1,
-    "elo": 1660
+    "gd": 0,
+    "elo": 1690
    },
    {
     "team": "South Korea",
-    "mp": 3,
-    "pts": 3,
-    "gf": 2,
-    "ga": 3,
-    "gd": -1,
-    "elo": 1776
+    "mp": 6,
+    "pts": 6,
+    "gf": 4,
+    "ga": 6,
+    "gd": -2,
+    "elo": 1730
    },
    {
     "team": "Czech Republic",
-    "mp": 3,
+    "mp": 5,
     "pts": 1,
-    "gf": 2,
-    "ga": 6,
-    "gd": -4,
-    "elo": 1627
+    "gf": 3,
+    "ga": 11,
+    "gd": -8,
+    "elo": 1603
    }
   ],
   "B": [
    {
     "team": "Switzerland",
-    "mp": 3,
-    "pts": 7,
-    "gf": 7,
-    "ga": 3,
-    "gd": 4,
-    "elo": 1884
+    "mp": 4,
+    "pts": 10,
+    "gf": 9,
+    "ga": 4,
+    "gd": 5,
+    "elo": 1935
    },
    {
     "team": "Canada",
-    "mp": 3,
+    "mp": 4,
     "pts": 4,
-    "gf": 8,
-    "ga": 3,
-    "gd": 5,
-    "elo": 1793
+    "gf": 9,
+    "ga": 5,
+    "gd": 4,
+    "elo": 1774
    },
    {
     "team": "Bosnia and Herzegovina",
@@ -142,7 +177,7 @@
     "gf": 5,
     "ga": 6,
     "gd": -1,
-    "elo": 1548
+    "elo": 1547
    },
    {
     "team": "Qatar",
@@ -157,12 +192,12 @@
   "C": [
    {
     "team": "Brazil",
-    "mp": 3,
-    "pts": 7,
-    "gf": 7,
+    "mp": 4,
+    "pts": 10,
+    "gf": 10,
     "ga": 1,
-    "gd": 6,
-    "elo": 1967
+    "gd": 9,
+    "elo": 1981
    },
    {
     "team": "Morocco",
@@ -171,63 +206,63 @@
     "gf": 6,
     "ga": 3,
     "gd": 3,
-    "elo": 1960
+    "elo": 1985
    },
    {
     "team": "Scotland",
-    "mp": 3,
-    "pts": 3,
-    "gf": 1,
+    "mp": 4,
+    "pts": 6,
+    "gf": 2,
     "ga": 4,
-    "gd": -3,
-    "elo": 1691
+    "gd": -2,
+    "elo": 1712
    },
    {
     "team": "Haiti",
-    "mp": 3,
+    "mp": 5,
     "pts": 0,
     "gf": 2,
-    "ga": 8,
-    "gd": -6,
-    "elo": 1622
+    "ga": 12,
+    "gd": -10,
+    "elo": 1587
    }
   ],
   "D": [
    {
     "team": "United States",
-    "mp": 3,
-    "pts": 6,
-    "gf": 8,
-    "ga": 4,
-    "gd": 4,
-    "elo": 1814
+    "mp": 5,
+    "pts": 9,
+    "gf": 14,
+    "ga": 8,
+    "gd": 6,
+    "elo": 1805
    },
    {
     "team": "Australia",
-    "mp": 3,
-    "pts": 4,
-    "gf": 2,
+    "mp": 5,
+    "pts": 8,
+    "gf": 4,
     "ga": 2,
-    "gd": 0,
-    "elo": 1826
+    "gd": 2,
+    "elo": 1799
    },
    {
     "team": "Paraguay",
-    "mp": 3,
-    "pts": 4,
-    "gf": 2,
-    "ga": 4,
-    "gd": -2,
-    "elo": 1742
+    "mp": 6,
+    "pts": 8,
+    "gf": 4,
+    "ga": 8,
+    "gd": -4,
+    "elo": 1750
    },
    {
     "team": "Turkey",
-    "mp": 3,
-    "pts": 3,
-    "gf": 3,
-    "ga": 5,
-    "gd": -2,
-    "elo": 1777
+    "mp": 6,
+    "pts": 6,
+    "gf": 6,
+    "ga": 10,
+    "gd": -4,
+    "elo": 1759
    }
   ],
   "E": [
@@ -247,28 +282,37 @@
     "gf": 4,
     "ga": 2,
     "gd": 2,
-    "elo": 1795
+    "elo": 1798
    },
    {
     "team": "Ecuador",
-    "mp": 3,
-    "pts": 4,
+    "mp": 4,
+    "pts": 5,
     "gf": 2,
     "ga": 2,
     "gd": 0,
-    "elo": 1810
+    "elo": 1778
    },
    {
     "team": "Cura\u00e7ao",
-    "mp": 3,
-    "pts": 1,
+    "mp": 4,
+    "pts": 2,
     "gf": 1,
     "ga": 9,
     "gd": -8,
-    "elo": 1582
+    "elo": 1596
    }
   ],
   "F": [
+   {
+    "team": "Japan",
+    "mp": 4,
+    "pts": 8,
+    "gf": 11,
+    "ga": 3,
+    "gd": 8,
+    "elo": 1895
+   },
    {
     "team": "Netherlands",
     "mp": 3,
@@ -276,83 +320,74 @@
     "gf": 10,
     "ga": 4,
     "gd": 6,
-    "elo": 1909
-   },
-   {
-    "team": "Japan",
-    "mp": 3,
-    "pts": 5,
-    "gf": 7,
-    "ga": 3,
-    "gd": 4,
-    "elo": 1884
+    "elo": 1886
    },
    {
     "team": "Sweden",
-    "mp": 3,
-    "pts": 4,
-    "gf": 7,
-    "ga": 7,
-    "gd": 0,
-    "elo": 1667
+    "mp": 4,
+    "pts": 7,
+    "gf": 12,
+    "ga": 8,
+    "gd": 4,
+    "elo": 1703
    },
    {
     "team": "Tunisia",
-    "mp": 3,
+    "mp": 5,
     "pts": 0,
-    "gf": 2,
-    "ga": 12,
-    "gd": -10,
-    "elo": 1595
+    "gf": 3,
+    "ga": 21,
+    "gd": -18,
+    "elo": 1544
    }
   ],
   "G": [
    {
-    "team": "Belgium",
-    "mp": 3,
-    "pts": 5,
-    "gf": 6,
-    "ga": 2,
+    "team": "Egypt",
+    "mp": 5,
+    "pts": 9,
+    "gf": 9,
+    "ga": 5,
     "gd": 4,
-    "elo": 1863
+    "elo": 1884
    },
    {
-    "team": "Egypt",
-    "mp": 3,
-    "pts": 5,
-    "gf": 5,
+    "team": "Belgium",
+    "mp": 4,
+    "pts": 8,
+    "gf": 11,
     "ga": 3,
-    "gd": 2,
-    "elo": 1815
+    "gd": 8,
+    "elo": 1880
    },
    {
     "team": "Iran",
-    "mp": 3,
-    "pts": 3,
-    "gf": 3,
-    "ga": 3,
+    "mp": 5,
+    "pts": 5,
+    "gf": 6,
+    "ga": 6,
     "gd": 0,
-    "elo": 1835
+    "elo": 1827
    },
    {
     "team": "New Zealand",
-    "mp": 3,
-    "pts": 1,
-    "gf": 4,
-    "ga": 10,
-    "gd": -6,
-    "elo": 1614
+    "mp": 6,
+    "pts": 2,
+    "gf": 8,
+    "ga": 20,
+    "gd": -12,
+    "elo": 1577
    }
   ],
   "H": [
    {
     "team": "Spain",
-    "mp": 3,
-    "pts": 7,
-    "gf": 5,
+    "mp": 4,
+    "pts": 10,
+    "gf": 6,
     "ga": 0,
-    "gd": 5,
-    "elo": 2062
+    "gd": 6,
+    "elo": 2074
    },
    {
     "team": "Cape Verde",
@@ -365,12 +400,12 @@
    },
    {
     "team": "Uruguay",
-    "mp": 3,
+    "mp": 4,
     "pts": 2,
     "gf": 3,
-    "ga": 4,
-    "gd": -1,
-    "elo": 1762
+    "ga": 5,
+    "gd": -2,
+    "elo": 1752
    },
    {
     "team": "Saudi Arabia",
@@ -390,25 +425,25 @@
     "gf": 10,
     "ga": 2,
     "gd": 8,
-    "elo": 2046
+    "elo": 2052
    },
    {
     "team": "Norway",
-    "mp": 3,
-    "pts": 6,
-    "gf": 8,
-    "ga": 7,
-    "gd": 1,
-    "elo": 1880
+    "mp": 4,
+    "pts": 9,
+    "gf": 11,
+    "ga": 9,
+    "gd": 2,
+    "elo": 1898
    },
    {
     "team": "Senegal",
-    "mp": 3,
+    "mp": 4,
     "pts": 3,
-    "gf": 8,
-    "ga": 6,
-    "gd": 2,
-    "elo": 1804
+    "gf": 10,
+    "ga": 9,
+    "gd": 1,
+    "elo": 1789
    },
    {
     "team": "Iraq",
@@ -417,56 +452,56 @@
     "gf": 1,
     "ga": 12,
     "gd": -11,
-    "elo": 1626
+    "elo": 1622
    }
   ],
   "J": [
    {
     "team": "Argentina",
-    "mp": 3,
-    "pts": 9,
-    "gf": 8,
+    "mp": 4,
+    "pts": 12,
+    "gf": 11,
     "ga": 1,
-    "gd": 7,
-    "elo": 2053
+    "gd": 10,
+    "elo": 2081
    },
    {
     "team": "Austria",
-    "mp": 3,
-    "pts": 4,
-    "gf": 6,
-    "ga": 6,
-    "gd": 0,
-    "elo": 1757
+    "mp": 4,
+    "pts": 7,
+    "gf": 9,
+    "ga": 7,
+    "gd": 2,
+    "elo": 1786
    },
    {
     "team": "Algeria",
-    "mp": 3,
-    "pts": 4,
-    "gf": 5,
-    "ga": 7,
-    "gd": -2,
-    "elo": 1789
+    "mp": 5,
+    "pts": 7,
+    "gf": 7,
+    "ga": 11,
+    "gd": -4,
+    "elo": 1756
    },
    {
     "team": "Jordan",
-    "mp": 3,
+    "mp": 5,
     "pts": 0,
-    "gf": 3,
-    "ga": 8,
-    "gd": -5,
-    "elo": 1668
+    "gf": 5,
+    "ga": 13,
+    "gd": -8,
+    "elo": 1615
    }
   ],
   "K": [
    {
     "team": "Colombia",
-    "mp": 3,
-    "pts": 7,
-    "gf": 4,
-    "ga": 1,
-    "gd": 3,
-    "elo": 1931
+    "mp": 5,
+    "pts": 13,
+    "gf": 8,
+    "ga": 2,
+    "gd": 6,
+    "elo": 1972
    },
    {
     "team": "Portugal",
@@ -479,21 +514,21 @@
    },
    {
     "team": "DR Congo",
-    "mp": 3,
+    "mp": 4,
     "pts": 4,
     "gf": 4,
-    "ga": 3,
-    "gd": 1,
-    "elo": 1757
+    "ga": 4,
+    "gd": 0,
+    "elo": 1745
    },
    {
     "team": "Uzbekistan",
-    "mp": 3,
+    "mp": 4,
     "pts": 0,
-    "gf": 2,
-    "ga": 11,
-    "gd": -9,
-    "elo": 1672
+    "gf": 3,
+    "ga": 14,
+    "gd": -11,
+    "elo": 1652
    }
   ],
   "L": [
@@ -504,7 +539,7 @@
     "gf": 6,
     "ga": 2,
     "gd": 4,
-    "elo": 1974
+    "elo": 1973
    },
    {
     "team": "Croatia",
@@ -522,7 +557,7 @@
     "gf": 2,
     "ga": 2,
     "gd": 0,
-    "elo": 1639
+    "elo": 1631
    },
    {
     "team": "Panama",
@@ -548,48 +583,46 @@
     "status": "FT",
     "date": "Jun 28",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 0.87,
+     "xgAway": 1.36,
      "topScorelines": [
-      {
-       "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
+       "p": 14.6
+      },
+      {
+       "h": 1,
+       "a": 1,
+       "p": 12.7
+      },
+      {
+       "h": 0,
+       "a": 0,
+       "p": 10.7
+      },
+      {
+       "h": 0,
+       "a": 2,
+       "p": 9.9
       },
       {
        "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 9.4
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
-      },
-      {
-       "h": 2,
-       "a": 1,
-       "p": 8.2
-      },
-      {
-       "h": 0,
-       "a": 0,
-       "p": 6.9
+       "p": 8.7
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 38.5,
+     "btts": 43.3,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1660,
-     "eloAway": 1793,
-     "formHome": -0.01,
-     "formAway": -0.072
+     "eloHome": 1690,
+     "eloAway": 1774
     },
     "winner": "Canada"
    },
@@ -608,48 +641,46 @@
     "status": "PENS",
     "date": "Jun 29",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.81,
+     "xgAway": 0.92,
      "topScorelines": [
       {
        "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 11.8
       },
       {
        "h": 1,
-       "a": 2,
-       "p": 8.2
+       "a": 1,
+       "p": 10.9
+      },
+      {
+       "h": 2,
+       "a": 0,
+       "p": 10.7
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.9
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 6.5
+      },
+      {
+       "h": 3,
+       "a": 0,
+       "p": 6.5
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 51.4,
+     "btts": 50.4,
      "scorersHome": [],
      "scorersAway": [],
      "eloHome": 1851,
-     "eloAway": 1742,
-     "formHome": 0.134,
-     "formAway": 0.122
+     "eloAway": 1750
     },
     "winner": "Paraguay"
    },
@@ -668,48 +699,46 @@
     "status": "PENS",
     "date": "Jun 29",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.07,
+     "xgAway": 1.57,
      "topScorelines": [
       {
        "h": 1,
        "a": 1,
-       "p": 12.3
+       "p": 12.0
       },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 0,
-       "p": 9.2
+       "p": 11.2
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
+       "p": 9.4
       },
       {
-       "h": 2,
-       "a": 1,
-       "p": 8.2
+       "h": 0,
+       "a": 2,
+       "p": 8.8
+      },
+      {
+       "h": 1,
+       "a": 0,
+       "p": 7.6
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 7.1
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 49.1,
+     "btts": 52.0,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1909,
-     "eloAway": 1960,
-     "formHome": 0.05,
-     "formAway": 0.058
+     "eloHome": 1886,
+     "eloAway": 1985
     },
     "winner": "Morocco"
    },
@@ -724,48 +753,46 @@
     "status": "FT",
     "date": "Jun 29",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.45,
+     "xgAway": 1.06,
      "topScorelines": [
       {
        "h": 1,
        "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
+       "p": 12.5
       },
       {
        "h": 1,
        "a": 0,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 2,
-       "p": 8.2
+       "p": 11.8
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.1
+      },
+      {
+       "h": 0,
+       "a": 1,
+       "p": 8.6
+      },
+      {
+       "h": 2,
+       "a": 0,
+       "p": 8.6
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 8.1
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 45.9,
+     "btts": 50.1,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1967,
-     "eloAway": 1884,
-     "formHome": 0.209,
-     "formAway": 0.087
+     "eloHome": 1981,
+     "eloAway": 1895
     },
     "winner": "Brazil"
    },
@@ -780,48 +807,46 @@
     "status": "FT",
     "date": "Jun 30",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 3.23,
+     "xgAway": 0.62,
      "topScorelines": [
       {
-       "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
+       "h": 3,
        "a": 0,
-       "p": 9.2
+       "p": 12.5
       },
       {
-       "h": 1,
-       "a": 2,
-       "p": 8.2
+       "h": 2,
+       "a": 0,
+       "p": 11.6
+      },
+      {
+       "h": 4,
+       "a": 0,
+       "p": 10.1
+      },
+      {
+       "h": 3,
+       "a": 1,
+       "p": 7.8
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 7.2
       },
       {
-       "h": 0,
+       "h": 1,
        "a": 0,
-       "p": 6.9
+       "p": 7.2
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 72.7,
+     "btts": 44.2,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 2046,
-     "eloAway": 1667,
-     "formHome": 0.119,
-     "formAway": 0.122
+     "eloHome": 2052,
+     "eloAway": 1703
     },
     "winner": "France"
    },
@@ -836,48 +861,46 @@
     "status": "FT",
     "date": "Jun 30",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.1,
+     "xgAway": 1.51,
      "topScorelines": [
       {
        "h": 1,
        "a": 1,
-       "p": 12.3
+       "p": 12.2
       },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 0,
-       "p": 9.2
+       "p": 11.2
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
+       "p": 9.2
       },
       {
-       "h": 2,
-       "a": 1,
-       "p": 8.2
+       "h": 0,
+       "a": 2,
+       "p": 8.4
+      },
+      {
+       "h": 1,
+       "a": 0,
+       "p": 8.1
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 7.4
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 48.2,
+     "btts": 51.8,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1795,
-     "eloAway": 1880,
-     "formHome": 0.191,
-     "formAway": 0.138
+     "eloHome": 1798,
+     "eloAway": 1898
     },
     "winner": "Norway"
    },
@@ -892,48 +915,46 @@
     "status": "FT",
     "date": "Jun 30",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.92,
+     "xgAway": 0.62,
      "topScorelines": [
       {
        "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 15.3
+      },
+      {
+       "h": 2,
+       "a": 0,
+       "p": 14.7
       },
       {
        "h": 1,
-       "a": 2,
-       "p": 8.2
+       "a": 1,
+       "p": 9.4
+      },
+      {
+       "h": 3,
+       "a": 0,
+       "p": 9.4
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.0
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 8.0
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 46.2,
+     "btts": 39.2,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1953,
-     "eloAway": 1810,
-     "formHome": 0.157,
-     "formAway": 0.064
+     "eloHome": 2007,
+     "eloAway": 1778
     },
     "winner": "Mexico"
    },
@@ -948,48 +969,46 @@
     "status": "FT",
     "date": "Jul 1",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.82,
+     "xgAway": 0.66,
      "topScorelines": [
       {
        "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 15.3
+      },
+      {
+       "h": 2,
+       "a": 0,
+       "p": 13.9
       },
       {
        "h": 1,
-       "a": 2,
-       "p": 8.2
+       "a": 1,
+       "p": 10.1
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.2
+      },
+      {
+       "h": 3,
+       "a": 0,
+       "p": 8.4
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 8.4
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 45.0,
+     "btts": 40.4,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1974,
-     "eloAway": 1757,
-     "formHome": 0.024,
-     "formAway": -0.02
+     "eloHome": 1973,
+     "eloAway": 1745
     },
     "winner": "England"
    },
@@ -1004,48 +1023,46 @@
     "status": "FT",
     "date": "Jul 1",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 2.1,
+     "xgAway": 0.8,
      "topScorelines": [
       {
-       "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
+       "h": 2,
+       "a": 0,
+       "p": 12.2
       },
       {
        "h": 1,
        "a": 0,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 2,
-       "p": 8.2
+       "p": 11.6
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.8
       },
       {
-       "h": 0,
+       "h": 1,
+       "a": 1,
+       "p": 9.3
+      },
+      {
+       "h": 3,
        "a": 0,
-       "p": 6.9
+       "p": 8.6
+      },
+      {
+       "h": 3,
+       "a": 1,
+       "p": 6.8
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 55.2,
+     "btts": 48.3,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1814,
-     "eloAway": 1548,
-     "formHome": 0.011,
-     "formAway": 0.244
+     "eloHome": 1805,
+     "eloAway": 1547
     },
     "winner": "United States"
    },
@@ -1060,48 +1077,46 @@
     "status": "AET",
     "date": "Jul 1",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.99,
+     "xgAway": 0.97,
      "topScorelines": [
       {
        "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 10.4
+      },
+      {
+       "h": 2,
+       "a": 0,
+       "p": 10.3
       },
       {
        "h": 1,
-       "a": 2,
-       "p": 8.2
+       "a": 1,
+       "p": 10.1
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 10.0
       },
       {
-       "h": 0,
+       "h": 3,
        "a": 0,
-       "p": 6.9
+       "p": 6.8
+      },
+      {
+       "h": 3,
+       "a": 1,
+       "p": 6.6
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 56.5,
+     "btts": 53.5,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1863,
-     "eloAway": 1804,
-     "formHome": 0.223,
-     "formAway": -0.166
+     "eloHome": 1880,
+     "eloAway": 1789
     },
     "winner": "Belgium"
    },
@@ -1116,48 +1131,46 @@
     "status": "FT",
     "date": "Jul 2",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.78,
+     "xgAway": 0.9,
      "topScorelines": [
       {
        "h": 1,
-       "a": 1,
+       "a": 0,
        "p": 12.3
       },
       {
-       "h": 0,
+       "h": 1,
        "a": 1,
-       "p": 9.2
+       "p": 11.0
       },
       {
-       "h": 1,
+       "h": 2,
        "a": 0,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 2,
-       "p": 8.2
+       "p": 10.9
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.8
       },
       {
        "h": 0,
        "a": 0,
        "p": 6.9
+      },
+      {
+       "h": 3,
+       "a": 0,
+       "p": 6.5
       }
      ],
      "over25": 49.9,
-     "btts": 54.3,
+     "btts": 49.2,
      "scorersHome": [],
      "scorersAway": [],
      "eloHome": 1933,
-     "eloAway": 1797,
-     "formHome": 0.081,
-     "formAway": -0.016
+     "eloAway": 1797
     },
     "winner": "Portugal"
    },
@@ -1172,48 +1185,46 @@
     "status": "FT",
     "date": "Jul 2",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 2.27,
+     "xgAway": 0.64,
      "topScorelines": [
       {
-       "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
+       "h": 2,
+       "a": 0,
+       "p": 14.2
       },
       {
        "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 12.5
       },
       {
-       "h": 1,
-       "a": 2,
-       "p": 8.2
+       "h": 3,
+       "a": 0,
+       "p": 10.7
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.1
       },
       {
-       "h": 0,
-       "a": 0,
+       "h": 1,
+       "a": 1,
+       "p": 8.0
+      },
+      {
+       "h": 3,
+       "a": 1,
        "p": 6.9
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 55.3,
+     "btts": 42.3,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 2062,
-     "eloAway": 1757,
-     "formHome": -0.088,
-     "formAway": 0.051
+     "eloHome": 2074,
+     "eloAway": 1786
     },
     "winner": "Spain"
    },
@@ -1228,48 +1239,46 @@
     "status": "FT",
     "date": "Jul 2",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.99,
+     "xgAway": 0.82,
      "topScorelines": [
       {
        "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 12.0
+      },
+      {
+       "h": 2,
+       "a": 0,
+       "p": 11.9
       },
       {
        "h": 1,
-       "a": 2,
-       "p": 8.2
+       "a": 1,
+       "p": 9.9
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.8
       },
       {
-       "h": 0,
+       "h": 3,
        "a": 0,
-       "p": 6.9
+       "p": 7.9
+      },
+      {
+       "h": 3,
+       "a": 1,
+       "p": 6.5
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 53.2,
+     "btts": 48.4,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1884,
-     "eloAway": 1789,
-     "formHome": 0.102,
-     "formAway": 0.018
+     "eloHome": 1935,
+     "eloAway": 1756
     },
     "winner": "Switzerland"
    },
@@ -1280,51 +1289,49 @@
     "status": "SCHEDULED",
     "date": "Jul 3",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 3.27,
+     "xgAway": 0.44,
      "topScorelines": [
       {
-       "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
+       "h": 3,
        "a": 0,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 2,
-       "p": 8.2
+       "p": 15.0
       },
       {
        "h": 2,
-       "a": 1,
-       "p": 8.2
+       "a": 0,
+       "p": 13.8
       },
       {
-       "h": 0,
+       "h": 4,
        "a": 0,
-       "p": 6.9
+       "p": 12.3
+      },
+      {
+       "h": 1,
+       "a": 0,
+       "p": 8.4
+      },
+      {
+       "h": 5,
+       "a": 0,
+       "p": 8.0
+      },
+      {
+       "h": 3,
+       "a": 1,
+       "p": 6.6
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 70.2,
+     "btts": 34.2,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 2053,
-     "eloAway": 1655,
-     "formHome": 0.117,
-     "formAway": 0.003
+     "eloHome": 2081,
+     "eloAway": 1655
     },
-    "pHome": 95.8,
-    "pAway": 4.2,
+    "pHome": 97.4,
+    "pAway": 2.6,
     "predicted": "Argentina"
    },
    {
@@ -1334,51 +1341,49 @@
     "status": "SCHEDULED",
     "date": "Jul 3",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 2.46,
+     "xgAway": 0.49,
      "topScorelines": [
       {
-       "h": 1,
-       "a": 1,
-       "p": 12.3
+       "h": 2,
+       "a": 0,
+       "p": 16.0
       },
       {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
+       "h": 3,
+       "a": 0,
+       "p": 13.1
       },
       {
        "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 13.0
       },
       {
-       "h": 1,
-       "a": 2,
-       "p": 8.2
+       "h": 4,
+       "a": 0,
+       "p": 8.1
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 7.9
       },
       {
-       "h": 0,
-       "a": 0,
-       "p": 6.9
+       "h": 3,
+       "a": 1,
+       "p": 6.5
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 56.1,
+     "btts": 35.6,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1931,
-     "eloAway": 1639,
-     "formHome": 0.084,
-     "formAway": 0.038
+     "eloHome": 1972,
+     "eloAway": 1631
     },
-    "pHome": 93.3,
-    "pAway": 6.7,
+    "pHome": 94.0,
+    "pAway": 6.0,
     "predicted": "Colombia"
    },
    {
@@ -1396,48 +1401,46 @@
     "status": "PENS",
     "date": "Jul 3",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 0.91,
+     "xgAway": 1.4,
      "topScorelines": [
-      {
-       "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
+       "p": 13.9
+      },
+      {
+       "h": 1,
+       "a": 1,
+       "p": 12.7
+      },
+      {
+       "h": 0,
+       "a": 0,
+       "p": 9.9
+      },
+      {
+       "h": 0,
+       "a": 2,
+       "p": 9.7
       },
       {
        "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 9.1
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
-      },
-      {
-       "h": 2,
-       "a": 1,
-       "p": 8.2
-      },
-      {
-       "h": 0,
-       "a": 0,
-       "p": 6.9
+       "p": 8.9
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 40.6,
+     "btts": 45.1,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1826,
-     "eloAway": 1815,
-     "formHome": -0.228,
-     "formAway": 0.161
+     "eloHome": 1799,
+     "eloAway": 1884
     },
     "winner": "Egypt"
    }
@@ -1450,51 +1453,49 @@
     "away": "Morocco",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 0.79,
+     "xgAway": 1.85,
      "topScorelines": [
-      {
-       "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
+       "p": 13.2
+      },
+      {
+       "h": 0,
+       "a": 2,
+       "p": 12.2
       },
       {
        "h": 1,
-       "a": 0,
-       "p": 9.2
+       "a": 1,
+       "p": 10.5
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
+       "p": 9.7
       },
       {
-       "h": 2,
-       "a": 1,
-       "p": 8.2
+       "h": 0,
+       "a": 3,
+       "p": 7.5
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 7.2
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 49.0,
+     "btts": 46.0,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1793,
-     "eloAway": 1960,
-     "formHome": -0.072,
-     "formAway": 0.058
+     "eloHome": 1774,
+     "eloAway": 1985
     },
-    "pHome": 29.0,
-    "pAway": 71.0,
+    "pHome": 23.5,
+    "pAway": 76.5,
     "predicted": "Morocco"
    },
    {
@@ -1504,51 +1505,49 @@
     "away": "France",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 0.59,
+     "xgAway": 2.52,
      "topScorelines": [
       {
-       "h": 1,
-       "a": 1,
-       "p": 12.3
+       "h": 0,
+       "a": 2,
+       "p": 14.4
+      },
+      {
+       "h": 0,
+       "a": 3,
+       "p": 12.1
       },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 0,
-       "p": 9.2
+       "p": 11.4
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
-      },
-      {
-       "h": 2,
-       "a": 1,
-       "p": 8.2
+       "p": 8.5
       },
       {
        "h": 0,
-       "a": 0,
-       "p": 6.9
+       "a": 4,
+       "p": 7.6
+      },
+      {
+       "h": 1,
+       "a": 3,
+       "p": 7.1
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 59.6,
+     "btts": 41.0,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1742,
-     "eloAway": 2046,
-     "formHome": 0.122,
-     "formAway": 0.119
+     "eloHome": 1750,
+     "eloAway": 2052
     },
-    "pHome": 16.3,
-    "pAway": 83.7,
+    "pHome": 12.7,
+    "pAway": 87.3,
     "predicted": "France"
    },
    {
@@ -1558,51 +1557,49 @@
     "away": "Norway",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.75,
+     "xgAway": 1.06,
      "topScorelines": [
       {
        "h": 1,
        "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
+       "p": 11.2
       },
       {
        "h": 1,
        "a": 0,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 2,
-       "p": 8.2
+       "p": 10.5
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.8
+      },
+      {
+       "h": 2,
+       "a": 0,
+       "p": 9.2
+      },
+      {
+       "h": 0,
+       "a": 1,
+       "p": 6.4
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 6.0
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 53.2,
+     "btts": 54.1,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1967,
-     "eloAway": 1880,
-     "formHome": 0.209,
-     "formAway": 0.138
+     "eloHome": 1981,
+     "eloAway": 1898
     },
-    "pHome": 79.0,
-    "pAway": 21.0,
+    "pHome": 76.6,
+    "pAway": 23.4,
     "predicted": "Brazil"
    },
    {
@@ -1612,51 +1609,49 @@
     "away": "England",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.24,
+     "xgAway": 1.0,
      "topScorelines": [
       {
        "h": 1,
+       "a": 0,
+       "p": 13.3
+      },
+      {
+       "h": 1,
        "a": 1,
-       "p": 12.3
+       "p": 13.2
+      },
+      {
+       "h": 0,
+       "a": 0,
+       "p": 10.7
       },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
+       "p": 10.7
       },
       {
-       "h": 1,
+       "h": 2,
        "a": 0,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 2,
        "p": 8.2
       },
       {
        "h": 2,
        "a": 1,
        "p": 8.2
-      },
-      {
-       "h": 0,
-       "a": 0,
-       "p": 6.9
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 38.6,
+     "btts": 44.8,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1953,
-     "eloAway": 1974,
-     "formHome": 0.157,
-     "formAway": 0.024
+     "eloHome": 2007,
+     "eloAway": 1973
     },
-    "pHome": 57.6,
-    "pAway": 42.4,
+    "pHome": 63.9,
+    "pAway": 36.1,
     "predicted": "Mexico"
    },
    {
@@ -1666,51 +1661,49 @@
     "away": "Spain",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 0.88,
+     "xgAway": 1.53,
      "topScorelines": [
-      {
-       "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
+       "p": 13.8
       },
       {
        "h": 1,
-       "a": 0,
-       "p": 9.2
+       "a": 1,
+       "p": 12.1
+      },
+      {
+       "h": 0,
+       "a": 2,
+       "p": 10.5
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
-      },
-      {
-       "h": 2,
-       "a": 1,
-       "p": 8.2
+       "p": 9.2
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 9.0
+      },
+      {
+       "h": 1,
+       "a": 0,
+       "p": 7.9
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 43.1,
+     "btts": 45.7,
      "scorersHome": [],
      "scorersAway": [],
      "eloHome": 1933,
-     "eloAway": 2062,
-     "formHome": 0.081,
-     "formAway": -0.088
+     "eloAway": 2074
     },
-    "pHome": 38.6,
-    "pAway": 61.4,
+    "pHome": 34.3,
+    "pAway": 65.7,
     "predicted": "Spain"
    },
    {
@@ -1720,52 +1713,50 @@
     "away": "Belgium",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.03,
+     "xgAway": 1.92,
      "topScorelines": [
       {
        "h": 1,
        "a": 1,
-       "p": 12.3
+       "p": 10.4
       },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 0,
-       "p": 9.2
+       "p": 10.1
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
-      },
-      {
-       "h": 2,
-       "a": 1,
-       "p": 8.2
+       "p": 10.0
       },
       {
        "h": 0,
-       "a": 0,
-       "p": 6.9
+       "a": 2,
+       "p": 9.7
+      },
+      {
+       "h": 1,
+       "a": 3,
+       "p": 6.4
+      },
+      {
+       "h": 0,
+       "a": 3,
+       "p": 6.2
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 56.5,
+     "btts": 54.9,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1814,
-     "eloAway": 1863,
-     "formHome": 0.011,
-     "formAway": 0.223
+     "eloHome": 1805,
+     "eloAway": 1880
     },
-    "pHome": 50.9,
-    "pAway": 49.1,
-    "predicted": "United States"
+    "pHome": 39.3,
+    "pAway": 60.7,
+    "predicted": "Belgium"
    },
    {
     "id": 95,
@@ -1774,51 +1765,49 @@
     "away": "Egypt",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 2.05,
+     "xgAway": 0.73,
      "topScorelines": [
       {
-       "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
+       "h": 2,
+       "a": 0,
+       "p": 13.1
       },
       {
        "h": 1,
        "a": 0,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 2,
-       "p": 8.2
+       "p": 12.8
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.6
       },
       {
-       "h": 0,
+       "h": 1,
+       "a": 1,
+       "p": 9.4
+      },
+      {
+       "h": 3,
        "a": 0,
-       "p": 6.9
+       "p": 8.9
+      },
+      {
+       "h": 3,
+       "a": 1,
+       "p": 6.5
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 52.3,
+     "btts": 45.2,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 2053,
-     "eloAway": 1815,
-     "formHome": 0.117,
-     "formAway": 0.161
+     "eloHome": 2081,
+     "eloAway": 1884
     },
-    "pHome": 80.3,
-    "pAway": 19.7,
+    "pHome": 81.5,
+    "pAway": 18.5,
     "predicted": "Argentina"
    },
    {
@@ -1828,51 +1817,49 @@
     "away": "Colombia",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.07,
+     "xgAway": 1.28,
      "topScorelines": [
       {
        "h": 1,
        "a": 1,
-       "p": 12.3
+       "p": 13.1
       },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
+       "p": 12.2
       },
       {
        "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 10.2
+      },
+      {
+       "h": 0,
+       "a": 0,
+       "p": 9.5
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
-      },
-      {
-       "h": 2,
-       "a": 1,
-       "p": 8.2
+       "p": 8.4
       },
       {
        "h": 0,
-       "a": 0,
-       "p": 6.9
+       "a": 2,
+       "p": 7.8
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 41.8,
+     "btts": 47.5,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1884,
-     "eloAway": 1931,
-     "formHome": 0.102,
-     "formAway": 0.084
+     "eloHome": 1935,
+     "eloAway": 1972
     },
-    "pHome": 37.8,
-    "pAway": 62.2,
+    "pHome": 43.3,
+    "pAway": 56.7,
     "predicted": "Colombia"
    }
   ],
@@ -1884,105 +1871,101 @@
     "away": "France",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.07,
+     "xgAway": 1.59,
      "topScorelines": [
       {
        "h": 1,
        "a": 1,
-       "p": 12.3
+       "p": 11.9
       },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 0,
-       "p": 9.2
+       "p": 11.2
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
+       "p": 9.5
       },
       {
-       "h": 2,
-       "a": 1,
-       "p": 8.2
+       "h": 0,
+       "a": 2,
+       "p": 8.9
+      },
+      {
+       "h": 1,
+       "a": 0,
+       "p": 7.5
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 7.0
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 49.6,
+     "btts": 52.2,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1960,
-     "eloAway": 2046,
-     "formHome": 0.058,
-     "formAway": 0.119
+     "eloHome": 1985,
+     "eloAway": 2052
     },
-    "pHome": 44.5,
-    "pAway": 55.5,
+    "pHome": 40.5,
+    "pAway": 59.5,
     "predicted": "France"
    },
    {
     "id": 98,
     "date": "Jul 10",
     "home": "Spain",
-    "away": "United States",
+    "away": "Belgium",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.69,
+     "xgAway": 0.89,
      "topScorelines": [
       {
        "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 12.8
       },
       {
        "h": 1,
-       "a": 2,
-       "p": 8.2
+       "a": 1,
+       "p": 11.4
+      },
+      {
+       "h": 2,
+       "a": 0,
+       "p": 10.8
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.7
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 7.5
+      },
+      {
+       "h": 0,
+       "a": 1,
+       "p": 6.7
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 47.7,
+     "btts": 48.2,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 2062,
-     "eloAway": 1814,
-     "formHome": -0.088,
-     "formAway": 0.011
+     "eloHome": 2074,
+     "eloAway": 1880
     },
-    "pHome": 87.0,
-    "pAway": 13.0,
+    "pHome": 82.5,
+    "pAway": 17.5,
     "predicted": "Spain"
    },
    {
@@ -1992,51 +1975,49 @@
     "away": "Mexico",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.16,
+     "xgAway": 1.29,
      "topScorelines": [
       {
        "h": 1,
        "a": 1,
-       "p": 12.3
+       "p": 12.9
       },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
+       "p": 11.2
       },
       {
        "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 10.0
+      },
+      {
+       "h": 0,
+       "a": 0,
+       "p": 8.7
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
+       "p": 8.3
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
-      },
-      {
-       "h": 0,
-       "a": 0,
-       "p": 6.9
+       "p": 7.5
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 44.2,
+     "btts": 49.7,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1967,
-     "eloAway": 1953,
-     "formHome": 0.209,
-     "formAway": 0.157
+     "eloHome": 1981,
+     "eloAway": 2007
     },
-    "pHome": 68.5,
-    "pAway": 31.5,
+    "pHome": 63.0,
+    "pAway": 37.0,
     "predicted": "Brazil"
    },
    {
@@ -2046,51 +2027,49 @@
     "away": "Colombia",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.63,
+     "xgAway": 0.86,
      "topScorelines": [
       {
        "h": 1,
-       "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 13.6
       },
       {
        "h": 1,
-       "a": 2,
-       "p": 8.2
+       "a": 1,
+       "p": 11.6
+      },
+      {
+       "h": 2,
+       "a": 0,
+       "p": 11.1
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 9.5
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 8.3
+      },
+      {
+       "h": 0,
+       "a": 1,
+       "p": 7.1
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 45.2,
+     "btts": 46.3,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 2053,
-     "eloAway": 1931,
-     "formHome": 0.117,
-     "formAway": 0.084
+     "eloHome": 2081,
+     "eloAway": 1972
     },
-    "pHome": 65.6,
-    "pAway": 34.4,
+    "pHome": 70.0,
+    "pAway": 30.0,
     "predicted": "Argentina"
    }
   ],
@@ -2102,51 +2081,49 @@
     "away": "Spain",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.21,
+     "xgAway": 1.21,
      "topScorelines": [
       {
        "h": 1,
        "a": 1,
-       "p": 12.3
-      },
-      {
-       "h": 0,
-       "a": 1,
-       "p": 9.2
+       "p": 13.0
       },
       {
        "h": 1,
        "a": 0,
-       "p": 9.2
+       "p": 10.8
       },
       {
-       "h": 1,
-       "a": 2,
-       "p": 8.2
+       "h": 0,
+       "a": 1,
+       "p": 10.7
+      },
+      {
+       "h": 0,
+       "a": 0,
+       "p": 8.9
       },
       {
        "h": 2,
        "a": 1,
-       "p": 8.2
+       "p": 7.9
       },
       {
-       "h": 0,
-       "a": 0,
-       "p": 6.9
+       "h": 1,
+       "a": 2,
+       "p": 7.9
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 43.5,
+     "btts": 49.2,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 2046,
-     "eloAway": 2062,
-     "formHome": 0.119,
-     "formAway": -0.088
+     "eloHome": 2052,
+     "eloAway": 2074
     },
-    "pHome": 57.5,
-    "pAway": 42.5,
+    "pHome": 56.5,
+    "pAway": 43.5,
     "predicted": "France"
    },
    {
@@ -2156,125 +2133,121 @@
     "away": "Argentina",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.34,
-     "xgAway": 1.34,
+     "xgHome": 1.0,
+     "xgAway": 1.74,
      "topScorelines": [
       {
        "h": 1,
        "a": 1,
-       "p": 12.3
+       "p": 11.3
       },
       {
        "h": 0,
        "a": 1,
-       "p": 9.2
-      },
-      {
-       "h": 1,
-       "a": 0,
-       "p": 9.2
+       "p": 11.2
       },
       {
        "h": 1,
        "a": 2,
-       "p": 8.2
+       "p": 9.8
       },
       {
-       "h": 2,
-       "a": 1,
-       "p": 8.2
+       "h": 0,
+       "a": 2,
+       "p": 9.7
+      },
+      {
+       "h": 1,
+       "a": 0,
+       "p": 6.5
       },
       {
        "h": 0,
        "a": 0,
-       "p": 6.9
+       "p": 6.5
       }
      ],
-     "over25": 49.9,
-     "btts": 54.3,
+     "over25": 51.5,
+     "btts": 52.2,
      "scorersHome": [],
      "scorersAway": [],
-     "eloHome": 1967,
-     "eloAway": 2053,
-     "formHome": 0.209,
-     "formAway": 0.117
+     "eloHome": 1981,
+     "eloAway": 2081
     },
-    "pHome": 56.1,
-    "pAway": 43.9,
-    "predicted": "Brazil"
+    "pHome": 49.6,
+    "pAway": 50.4,
+    "predicted": "Argentina"
    }
   ],
   "final": {
    "id": 104,
    "date": "Jul 19",
    "home": "France",
-   "away": "Brazil",
+   "away": "Argentina",
    "status": "SCHEDULED",
    "detail": {
-    "xgHome": 1.34,
-    "xgAway": 1.34,
+    "xgHome": 1.17,
+    "xgAway": 1.45,
     "topScorelines": [
      {
       "h": 1,
       "a": 1,
-      "p": 12.3
+      "p": 12.4
      },
      {
       "h": 0,
       "a": 1,
-      "p": 9.2
-     },
-     {
-      "h": 1,
-      "a": 0,
-      "p": 9.2
+      "p": 10.6
      },
      {
       "h": 1,
       "a": 2,
-      "p": 8.2
+      "p": 8.9
      },
      {
-      "h": 2,
-      "a": 1,
-      "p": 8.2
+      "h": 1,
+      "a": 0,
+      "p": 8.6
+     },
+     {
+      "h": 0,
+      "a": 2,
+      "p": 7.6
      },
      {
       "h": 0,
       "a": 0,
-      "p": 6.9
+      "p": 7.3
      }
     ],
-    "over25": 49.9,
-    "btts": 54.3,
+    "over25": 48.6,
+    "btts": 52.7,
     "scorersHome": [],
     "scorersAway": [],
-    "eloHome": 2046,
-    "eloAway": 1967,
-    "formHome": 0.119,
-    "formAway": 0.209
+    "eloHome": 2052,
+    "eloAway": 2081
    },
-   "pHome": 61.6,
-   "pAway": 38.4,
+   "pHome": 54.0,
+   "pAway": 46.0,
    "predicted": "France"
   }
  },
  "champion_probs": {
-  "France": 22.8,
-  "Spain": 17.4,
-  "Brazil": 15.5,
-  "Argentina": 13.8,
-  "Morocco": 10.8,
-  "Portugal": 4.5,
-  "Colombia": 4.0,
-  "Mexico": 3.7,
-  "England": 3.0,
-  "Belgium": 0.9,
+  "France": 24.4,
+  "Spain": 18.7,
+  "Argentina": 16.8,
+  "Brazil": 13.0,
+  "Morocco": 9.0,
+  "Mexico": 5.5,
+  "Colombia": 3.5,
+  "Portugal": 3.0,
+  "England": 2.0,
+  "Switzerland": 1.3,
+  "Belgium": 1.1,
   "Norway": 0.9,
-  "Egypt": 0.7,
-  "United States": 0.7,
-  "Switzerland": 0.6,
-  "Canada": 0.5,
-  "Paraguay": 0.2
+  "Egypt": 0.5,
+  "United States": 0.2,
+  "Canada": 0.1,
+  "Paraguay": 0.1
  }
 }
