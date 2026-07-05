@@ -1,97 +1,97 @@
 {
- "generated_at": "2026-07-05T02:13:10.998284+00:00",
+ "generated_at": "2026-07-05T08:45:16.284117+00:00",
  "methodology": {
   "candidates_compared": [
    {
     "model": "LogisticRegression",
     "holdout_matches": 102,
     "accuracy": 62.7,
-    "log_loss": 0.8691,
+    "log_loss": 0.8688,
     "brier": 0.516
    },
    {
     "model": "LDA",
     "holdout_matches": 102,
     "accuracy": 61.8,
-    "log_loss": 0.8704,
+    "log_loss": 0.8701,
     "brier": 0.5164
    },
    {
     "model": "RandomForest",
     "holdout_matches": 102,
-    "accuracy": 60.8,
-    "log_loss": 0.9032,
-    "brier": 0.5323
+    "accuracy": 58.8,
+    "log_loss": 0.898,
+    "brier": 0.5284
    },
    {
     "model": "ExtraTrees",
     "holdout_matches": 102,
     "accuracy": 62.7,
-    "log_loss": 0.9006,
-    "brier": 0.5279
+    "log_loss": 0.9007,
+    "brier": 0.5281
    },
    {
     "model": "BaggedTrees",
     "holdout_matches": 102,
     "accuracy": 60.8,
-    "log_loss": 0.917,
-    "brier": 0.5428
+    "log_loss": 0.9143,
+    "brier": 0.5407
    },
    {
     "model": "GradientBoosting",
     "holdout_matches": 102,
-    "accuracy": 61.8,
-    "log_loss": 0.9084,
-    "brier": 0.535
+    "accuracy": 60.8,
+    "log_loss": 0.9075,
+    "brier": 0.5348
    },
    {
     "model": "HistGradBoost",
     "holdout_matches": 102,
-    "accuracy": 59.8,
-    "log_loss": 0.9207,
-    "brier": 0.541
+    "accuracy": 56.9,
+    "log_loss": 0.9348,
+    "brier": 0.5536
    },
    {
     "model": "KNN(k=75)",
     "holdout_matches": 102,
     "accuracy": 58.8,
-    "log_loss": 0.9221,
-    "brier": 0.5463
+    "log_loss": 0.9222,
+    "brier": 0.5466
    },
    {
     "model": "SVM-RBF",
     "holdout_matches": 102,
     "accuracy": 60.8,
-    "log_loss": 0.8988,
-    "brier": 0.5281
+    "log_loss": 0.8973,
+    "brier": 0.5276
    },
    {
     "model": "NeuralNet-MLP",
     "holdout_matches": 102,
-    "accuracy": 59.8,
-    "log_loss": 0.9067,
-    "brier": 0.5361
+    "accuracy": 60.8,
+    "log_loss": 0.9106,
+    "brier": 0.5377
    },
    {
     "model": "XGBoost",
     "holdout_matches": 102,
-    "accuracy": 52.0,
-    "log_loss": 0.988,
-    "brier": 0.5755
+    "accuracy": 52.9,
+    "log_loss": 0.9839,
+    "brier": 0.5731
    },
    {
     "model": "Ensemble(soft-vote)",
     "holdout_matches": 102,
-    "accuracy": 61.8,
-    "log_loss": 0.8986,
-    "brier": 0.53
+    "accuracy": 63.7,
+    "log_loss": 0.9005,
+    "brier": 0.5323
    },
    {
     "model": "PoissonGoals(ref)",
     "holdout_matches": 102,
-    "accuracy": 63.7,
-    "log_loss": 0.8641,
-    "brier": 0.5062
+    "accuracy": 62.7,
+    "log_loss": 0.8642,
+    "brier": 0.5063
    }
   ],
   "selected_model": "LogisticRegression",
@@ -159,7 +159,7 @@
     "gf": 9,
     "ga": 4,
     "gd": 5,
-    "elo": 1934
+    "elo": 1935
    },
    {
     "team": "Canada",
@@ -481,7 +481,7 @@
     "gf": 7,
     "ga": 11,
     "gd": -4,
-    "elo": 1755
+    "elo": 1756
    },
    {
     "team": "Jordan",
@@ -609,7 +609,7 @@
       {
        "h": 0,
        "a": 2,
-       "p": 9.3
+       "p": 9.2
       },
       {
        "h": 1,
@@ -622,11 +622,11 @@
      "scorersHome": [
       {
        "player": "Teboho Mokoena",
-       "pScore": 36.9
+       "pScore": 37.0
       },
       {
        "player": "Thapelo Maseko",
-       "pScore": 36.9
+       "pScore": 37.0
       }
      ],
      "scorersAway": [
@@ -1700,7 +1700,7 @@
        "p": 6.5
       }
      ],
-     "over25": 53.1,
+     "over25": 53.2,
      "btts": 48.4,
      "scorersHome": [
       {
@@ -1742,8 +1742,8 @@
        "pScore": 15.2
       }
      ],
-     "eloHome": 1934,
-     "eloAway": 1755
+     "eloHome": 1935,
+     "eloAway": 1756
     },
     "winner": "Switzerland"
    },
@@ -1793,25 +1793,37 @@
      "scorersHome": [
       {
        "player": "Lionel Messi",
-       "pScore": 93.0
+       "pScore": 91.6
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 35.7
+       "pScore": 29.8
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 35.7
+       "pScore": 29.8
+      },
+      {
+       "player": "Lisandro Mart\u00ednez",
+       "pScore": 29.8
       }
      ],
      "scorersAway": [
       {
+       "player": "Deroy Duarte",
+       "pScore": 10.4
+      },
+      {
        "player": "H\u00e9lio Varela",
-       "pScore": 19.8
+       "pScore": 10.4
       },
       {
        "player": "Kevin Pina",
-       "pScore": 19.8
+       "pScore": 10.4
+      },
+      {
+       "player": "Sidny Lopes Cabral",
+       "pScore": 10.4
       }
      ],
      "eloHome": 2086,
@@ -1867,15 +1879,19 @@
      "scorersHome": [
       {
        "player": "Daniel Mu\u00f1oz",
-       "pScore": 71.2
+       "pScore": 63.0
       },
       {
        "player": "Jaminton Campaz",
-       "pScore": 46.3
+       "pScore": 39.2
+      },
+      {
+       "player": "Jhon Arias",
+       "pScore": 39.2
       },
       {
        "player": "Luis D\u00edaz",
-       "pScore": 46.3
+       "pScore": 39.2
       }
      ],
      "scorersAway": [
@@ -1959,23 +1975,23 @@
      "scorersAway": [
       {
        "player": "Emam Ashour",
-       "pScore": 19.0
+       "pScore": 29.6
       },
       {
        "player": "Mahmoud Saber",
-       "pScore": 19.0
+       "pScore": 16.1
       },
       {
        "player": "Mohamed Salah",
-       "pScore": 19.0
+       "pScore": 16.1
       },
       {
        "player": "Mostafa Ziko",
-       "pScore": 19.0
+       "pScore": 16.1
       },
       {
        "player": "Tr\u00e9z\u00e9guet",
-       "pScore": 19.0
+       "pScore": 16.1
       }
      ],
      "eloHome": 1844,
@@ -2008,7 +2024,7 @@
       {
        "h": 0,
        "a": 3,
-       "p": 9.7
+       "p": 9.8
       },
       {
        "h": 1,
@@ -2026,7 +2042,7 @@
        "p": 6.8
       }
      ],
-     "over25": 54.2,
+     "over25": 54.3,
      "btts": 44.4,
      "scorersHome": [
       {
@@ -2075,8 +2091,8 @@
      "eloHome": 1750,
      "eloAway": 2009
     },
-    "pHome": 18.7,
-    "pAway": 81.3,
+    "pHome": 18.6,
+    "pAway": 81.4,
     "predicted": "Morocco"
    },
    {
@@ -2571,37 +2587,41 @@
      "scorersHome": [
       {
        "player": "Lionel Messi",
-       "pScore": 80.8
+       "pScore": 78.6
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 24.1
+       "pScore": 19.8
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 24.1
+       "pScore": 19.8
+      },
+      {
+       "player": "Lisandro Mart\u00ednez",
+       "pScore": 19.8
       }
      ],
      "scorersAway": [
       {
        "player": "Emam Ashour",
-       "pScore": 12.3
+       "pScore": 19.7
       },
       {
        "player": "Mahmoud Saber",
-       "pScore": 12.3
+       "pScore": 10.4
       },
       {
        "player": "Mohamed Salah",
-       "pScore": 12.3
+       "pScore": 10.4
       },
       {
        "player": "Mostafa Ziko",
-       "pScore": 12.3
+       "pScore": 10.4
       },
       {
        "player": "Tr\u00e9z\u00e9guet",
-       "pScore": 12.3
+       "pScore": 10.4
       }
      ],
      "eloHome": 2086,
@@ -2679,22 +2699,26 @@
      "scorersAway": [
       {
        "player": "Daniel Mu\u00f1oz",
-       "pScore": 47.8
+       "pScore": 40.5
       },
       {
        "player": "Jaminton Campaz",
-       "pScore": 27.8
+       "pScore": 22.9
+      },
+      {
+       "player": "Jhon Arias",
+       "pScore": 22.9
       },
       {
        "player": "Luis D\u00edaz",
-       "pScore": 27.8
+       "pScore": 22.9
       }
      ],
-     "eloHome": 1934,
+     "eloHome": 1935,
      "eloAway": 1980
     },
-    "pHome": 43.3,
-    "pAway": 56.7,
+    "pHome": 43.5,
+    "pAway": 56.5,
     "predicted": "Colombia"
    }
   ],
@@ -3015,29 +3039,37 @@
      "scorersHome": [
       {
        "player": "Lionel Messi",
-       "pScore": 69.6
+       "pScore": 67.1
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 18.0
+       "pScore": 14.7
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 18.0
+       "pScore": 14.7
+      },
+      {
+       "player": "Lisandro Mart\u00ednez",
+       "pScore": 14.7
       }
      ],
      "scorersAway": [
       {
        "player": "Daniel Mu\u00f1oz",
-       "pScore": 35.9
+       "pScore": 29.9
       },
       {
        "player": "Jaminton Campaz",
-       "pScore": 19.9
+       "pScore": 16.3
+      },
+      {
+       "player": "Jhon Arias",
+       "pScore": 16.3
       },
       {
        "player": "Luis D\u00edaz",
-       "pScore": 19.9
+       "pScore": 16.3
       }
      ],
      "eloHome": 2086,
@@ -3199,15 +3231,19 @@
      "scorersAway": [
       {
        "player": "Lionel Messi",
-       "pScore": 73.6
+       "pScore": 71.1
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 19.9
+       "pScore": 16.3
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 19.9
+       "pScore": 16.3
+      },
+      {
+       "player": "Lisandro Mart\u00ednez",
+       "pScore": 16.3
       }
      ],
      "eloHome": 1981,
@@ -3306,21 +3342,21 @@
   }
  },
  "champion_probs": {
-  "France": 21.0,
-  "Spain": 18.7,
-  "Argentina": 18.5,
-  "Brazil": 13.2,
-  "Morocco": 11.8,
-  "Mexico": 5.2,
-  "Portugal": 3.0,
-  "Colombia": 3.0,
-  "England": 2.1,
-  "Norway": 1.0,
-  "Belgium": 1.0,
-  "Switzerland": 0.8,
-  "Egypt": 0.4,
+  "France": 21.6,
+  "Spain": 18.5,
+  "Argentina": 17.9,
+  "Brazil": 13.7,
+  "Morocco": 12.0,
+  "Mexico": 4.8,
+  "Portugal": 3.2,
+  "Colombia": 3.1,
+  "England": 1.9,
+  "Switzerland": 1.1,
+  "Norway": 0.9,
+  "Belgium": 0.9,
+  "Egypt": 0.3,
+  "Canada": 0.1,
   "Paraguay": 0.1,
-  "United States": 0.1,
-  "Canada": 0.0
+  "United States": 0.1
  }
 }
