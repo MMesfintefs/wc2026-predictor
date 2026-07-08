@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-08T08:12:23.862393+00:00",
+ "generated_at": "2026-07-08T13:46:27.719869+00:00",
  "methodology": {
   "candidates_compared": [
    {
@@ -1809,19 +1809,27 @@
      "scorersHome": [
       {
        "player": "Lionel Messi",
-       "pScore": 92.3
+       "pScore": 89.5
+      },
+      {
+       "player": "Cristian Romero",
+       "pScore": 24.5
+      },
+      {
+       "player": "Enzo Fern\u00e1ndez",
+       "pScore": 24.5
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 30.6
+       "pScore": 24.5
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 30.6
+       "pScore": 24.5
       },
       {
        "player": "Lisandro Mart\u00ednez",
-       "pScore": 30.6
+       "pScore": 24.5
       }
      ],
      "scorersAway": [
@@ -1991,23 +1999,27 @@
      "scorersAway": [
       {
        "player": "Emam Ashour",
-       "pScore": 28.5
-      },
-      {
-       "player": "Mahmoud Saber",
-       "pScore": 15.5
-      },
-      {
-       "player": "Mohamed Salah",
-       "pScore": 15.5
+       "pScore": 22.3
       },
       {
        "player": "Mostafa Ziko",
-       "pScore": 15.5
+       "pScore": 22.3
+      },
+      {
+       "player": "Mahmoud Saber",
+       "pScore": 11.8
+      },
+      {
+       "player": "Mohamed Salah",
+       "pScore": 11.8
       },
       {
        "player": "Tr\u00e9z\u00e9guet",
-       "pScore": 15.5
+       "pScore": 11.8
+      },
+      {
+       "player": "Yasser Ibrahim",
+       "pScore": 11.8
       }
      ],
      "eloHome": 1844,
@@ -2619,41 +2631,53 @@
      "scorersHome": [
       {
        "player": "Lionel Messi",
-       "pScore": 81.9
+       "pScore": 77.7
+      },
+      {
+       "player": "Cristian Romero",
+       "pScore": 17.1
+      },
+      {
+       "player": "Enzo Fern\u00e1ndez",
+       "pScore": 17.1
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 21.7
+       "pScore": 17.1
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 21.7
+       "pScore": 17.1
       },
       {
        "player": "Lisandro Mart\u00ednez",
-       "pScore": 21.7
+       "pScore": 17.1
       }
      ],
      "scorersAway": [
       {
        "player": "Emam Ashour",
-       "pScore": 18.8
-      },
-      {
-       "player": "Mahmoud Saber",
-       "pScore": 9.9
-      },
-      {
-       "player": "Mohamed Salah",
-       "pScore": 9.9
+       "pScore": 14.5
       },
       {
        "player": "Mostafa Ziko",
-       "pScore": 9.9
+       "pScore": 14.5
+      },
+      {
+       "player": "Mahmoud Saber",
+       "pScore": 7.5
+      },
+      {
+       "player": "Mohamed Salah",
+       "pScore": 7.5
       },
       {
        "player": "Tr\u00e9z\u00e9guet",
-       "pScore": 9.9
+       "pScore": 7.5
+      },
+      {
+       "player": "Yasser Ibrahim",
+       "pScore": 7.5
       }
      ],
      "eloHome": 2098,
@@ -3079,19 +3103,27 @@
      "scorersHome": [
       {
        "player": "Lionel Messi",
-       "pScore": 66.7
+       "pScore": 62.0
+      },
+      {
+       "player": "Cristian Romero",
+       "pScore": 11.4
+      },
+      {
+       "player": "Enzo Fern\u00e1ndez",
+       "pScore": 11.4
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 14.5
+       "pScore": 11.4
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 14.5
+       "pScore": 11.4
       },
       {
        "player": "Lisandro Mart\u00ednez",
-       "pScore": 14.5
+       "pScore": 11.4
       }
      ],
      "scorersAway": [
@@ -3279,19 +3311,27 @@
      "scorersAway": [
       {
        "player": "Lionel Messi",
-       "pScore": 75.4
+       "pScore": 70.9
+      },
+      {
+       "player": "Cristian Romero",
+       "pScore": 14.3
+      },
+      {
+       "player": "Enzo Fern\u00e1ndez",
+       "pScore": 14.3
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 18.2
+       "pScore": 14.3
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 18.2
+       "pScore": 14.3
       },
       {
        "player": "Lisandro Mart\u00ednez",
-       "pScore": 18.2
+       "pScore": 14.3
       }
      ],
      "eloHome": 1944,
@@ -3366,19 +3406,27 @@
     "scorersAway": [
      {
       "player": "Lionel Messi",
-      "pScore": 65.0
+      "pScore": 60.3
+     },
+     {
+      "player": "Cristian Romero",
+      "pScore": 10.9
+     },
+     {
+      "player": "Enzo Fern\u00e1ndez",
+      "pScore": 10.9
      },
      {
       "player": "Giovani Lo Celso",
-      "pScore": 13.9
+      "pScore": 10.9
      },
      {
       "player": "Lautaro Mart\u00ednez",
-      "pScore": 13.9
+      "pScore": 10.9
      },
      {
       "player": "Lisandro Mart\u00ednez",
-      "pScore": 13.9
+      "pScore": 10.9
      }
     ],
     "eloHome": 2061,
@@ -3390,21 +3438,20 @@
   }
  },
  "champion_probs": {
-  "Argentina": 23.0,
-  "France": 19.8,
-  "Spain": 18.3,
-  "Morocco": 9.4,
-  "Brazil": 8.3,
-  "England": 5.3,
-  "Belgium": 4.6,
-  "Colombia": 3.0,
-  "Portugal": 2.9,
+  "Argentina": 23.3,
+  "Spain": 19.8,
+  "France": 19.2,
+  "Morocco": 9.2,
+  "Brazil": 8.4,
+  "England": 5.8,
+  "Belgium": 3.9,
+  "Portugal": 3.0,
+  "Colombia": 2.5,
   "Mexico": 2.1,
   "Norway": 1.4,
-  "Switzerland": 1.4,
-  "Egypt": 0.3,
-  "Canada": 0.1,
-  "Paraguay": 0.1,
-  "United States": 0.0
+  "Switzerland": 1.0,
+  "Egypt": 0.4,
+  "Paraguay": 0.0,
+  "Canada": 0.0
  }
 }
