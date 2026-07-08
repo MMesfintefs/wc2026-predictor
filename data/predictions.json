@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-07T19:46:09.719204+00:00",
+ "generated_at": "2026-07-08T01:54:21.019169+00:00",
  "methodology": {
   "candidates_compared": [
    {
@@ -19,72 +19,72 @@
    {
     "model": "RandomForest",
     "holdout_matches": 102,
-    "accuracy": 58.8,
-    "log_loss": 0.899,
-    "brier": 0.529
+    "accuracy": 59.8,
+    "log_loss": 0.9,
+    "brier": 0.5297
    },
    {
     "model": "ExtraTrees",
     "holdout_matches": 102,
     "accuracy": 62.7,
-    "log_loss": 0.9005,
-    "brier": 0.5278
+    "log_loss": 0.9007,
+    "brier": 0.528
    },
    {
     "model": "BaggedTrees",
     "holdout_matches": 102,
-    "accuracy": 58.8,
-    "log_loss": 0.9213,
-    "brier": 0.5452
+    "accuracy": 61.8,
+    "log_loss": 0.9194,
+    "brier": 0.5429
    },
    {
     "model": "GradientBoosting",
     "holdout_matches": 102,
-    "accuracy": 63.7,
-    "log_loss": 0.906,
-    "brier": 0.532
+    "accuracy": 61.8,
+    "log_loss": 0.9082,
+    "brier": 0.5348
    },
    {
     "model": "HistGradBoost",
     "holdout_matches": 102,
     "accuracy": 60.8,
-    "log_loss": 0.9247,
-    "brier": 0.5446
+    "log_loss": 0.9264,
+    "brier": 0.5419
    },
    {
     "model": "KNN(k=75)",
     "holdout_matches": 102,
     "accuracy": 58.8,
-    "log_loss": 0.9225,
-    "brier": 0.5466
+    "log_loss": 0.9221,
+    "brier": 0.5464
    },
    {
     "model": "SVM-RBF",
     "holdout_matches": 102,
     "accuracy": 60.8,
-    "log_loss": 0.8996,
-    "brier": 0.5286
+    "log_loss": 0.899,
+    "brier": 0.5282
    },
    {
     "model": "NeuralNet-MLP",
     "holdout_matches": 102,
     "accuracy": 62.7,
-    "log_loss": 0.9073,
-    "brier": 0.5375
+    "log_loss": 0.9018,
+    "brier": 0.5304
    },
    {
     "model": "XGBoost",
     "holdout_matches": 102,
-    "accuracy": 52.9,
-    "log_loss": 0.9674,
-    "brier": 0.5652
+    "accuracy": 54.9,
+    "log_loss": 0.9844,
+    "brier": 0.5727
    },
    {
     "model": "Ensemble(soft-vote)",
     "holdout_matches": 102,
-    "accuracy": 64.7,
-    "log_loss": 0.8958,
-    "brier": 0.5289
+    "accuracy": 63.7,
+    "log_loss": 0.8993,
+    "brier": 0.5299
    },
    {
     "model": "PoissonGoals(ref)",
@@ -109,7 +109,7 @@
   ],
   "train_window": "2016-01-01 \u2192 2026-06-01",
   "player_adjustment": "applied to 10 teams; scorer data for 46 teams",
-  "football_data_org": "filled 87 finished matches",
+  "football_data_org": "filled 88 finished matches",
   "statsbomb_xg": "loaded"
  },
  "standings": {
@@ -159,7 +159,7 @@
     "gf": 9,
     "ga": 4,
     "gd": 5,
-    "elo": 1934
+    "elo": 1938
    },
    {
     "team": "Canada",
@@ -501,7 +501,7 @@
     "gf": 8,
     "ga": 2,
     "gd": 6,
-    "elo": 1980
+    "elo": 1976
    },
    {
     "team": "Portugal",
@@ -671,7 +671,7 @@
     "status": "PENS",
     "date": "Jun 29",
     "detail": {
-     "xgHome": 1.92,
+     "xgHome": 1.91,
      "xgAway": 0.88,
      "topScorelines": [
       {
@@ -910,19 +910,19 @@
       },
       {
        "player": "Matheus Cunha",
-       "pScore": 33.4
+       "pScore": 33.3
       },
       {
        "player": "Casemiro",
-       "pScore": 12.7
+       "pScore": 12.6
       },
       {
        "player": "Gabriel Martinelli",
-       "pScore": 12.7
+       "pScore": 12.6
       },
       {
        "player": "Neymar",
-       "pScore": 12.7
+       "pScore": 12.6
       }
      ],
      "scorersAway": [
@@ -1208,11 +1208,11 @@
      "scorersAway": [
       {
        "player": "Gonzalo Plata",
-       "pScore": 31.8
+       "pScore": 31.9
       },
       {
        "player": "Nilson Angulo",
-       "pScore": 31.8
+       "pScore": 31.9
       }
      ],
      "eloHome": 1933,
@@ -1346,7 +1346,7 @@
       }
      ],
      "over25": 51.6,
-     "btts": 51.3,
+     "btts": 51.4,
      "scorersHome": [
       {
        "player": "Folarin Balogun",
@@ -1501,7 +1501,7 @@
       {
        "h": 1,
        "a": 1,
-       "p": 11.3
+       "p": 11.4
       },
       {
        "h": 2,
@@ -1682,83 +1682,83 @@
     "status": "FT",
     "date": "Jul 2",
     "detail": {
-     "xgHome": 1.99,
-     "xgAway": 0.83,
+     "xgHome": 1.94,
+     "xgAway": 0.77,
      "topScorelines": [
       {
        "h": 1,
        "a": 0,
-       "p": 12.0
+       "p": 13.0
       },
       {
        "h": 2,
        "a": 0,
-       "p": 11.9
+       "p": 12.6
       },
       {
        "h": 1,
        "a": 1,
-       "p": 9.9
+       "p": 10.0
       },
       {
        "h": 2,
        "a": 1,
-       "p": 9.8
+       "p": 9.7
       },
       {
        "h": 3,
        "a": 0,
-       "p": 7.9
+       "p": 8.1
       },
       {
-       "h": 3,
-       "a": 1,
-       "p": 6.5
+       "h": 0,
+       "a": 0,
+       "p": 6.7
       }
      ],
-     "over25": 53.2,
-     "btts": 48.5,
+     "over25": 50.5,
+     "btts": 45.8,
      "scorersHome": [
       {
        "player": "Johan Manzambi",
-       "pScore": 48.5
+       "pScore": 47.5
       },
       {
        "player": "Breel Embolo",
-       "pScore": 35.7
+       "pScore": 35.0
       },
       {
        "player": "Ruben Vargas",
-       "pScore": 35.7
+       "pScore": 35.0
       },
       {
        "player": "Dan Ndoye",
-       "pScore": 19.8
+       "pScore": 19.4
       },
       {
        "player": "Granit Xhaka",
-       "pScore": 19.8
+       "pScore": 19.4
       }
      ],
      "scorersAway": [
       {
        "player": "Riyad Mahrez",
-       "pScore": 28.1
+       "pScore": 26.5
       },
       {
        "player": "Amine Gouiri",
-       "pScore": 15.2
+       "pScore": 14.2
       },
       {
        "player": "Nadhir Benbouali",
-       "pScore": 15.2
+       "pScore": 14.2
       },
       {
        "player": "Rafik Belghali",
-       "pScore": 15.2
+       "pScore": 14.2
       }
      ],
-     "eloHome": 1934,
+     "eloHome": 1938,
      "eloAway": 1755
     },
     "winner": "Switzerland"
@@ -1813,15 +1813,15 @@
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 30.7
+       "pScore": 30.6
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 30.7
+       "pScore": 30.6
       },
       {
        "player": "Lisandro Mart\u00ednez",
-       "pScore": 30.7
+       "pScore": 30.6
       }
      ],
      "scorersAway": [
@@ -1856,75 +1856,75 @@
     "status": "SCHEDULED",
     "date": "Jul 3",
     "detail": {
-     "xgHome": 2.48,
-     "xgAway": 0.46,
+     "xgHome": 2.44,
+     "xgAway": 0.44,
      "topScorelines": [
       {
        "h": 2,
        "a": 0,
-       "p": 16.4
-      },
-      {
-       "h": 3,
-       "a": 0,
-       "p": 13.6
+       "p": 16.9
       },
       {
        "h": 1,
        "a": 0,
-       "p": 13.2
+       "p": 13.9
+      },
+      {
+       "h": 3,
+       "a": 0,
+       "p": 13.7
       },
       {
        "h": 4,
        "a": 0,
-       "p": 8.4
+       "p": 8.3
       },
       {
        "h": 2,
        "a": 1,
-       "p": 7.6
+       "p": 7.5
       },
       {
-       "h": 3,
+       "h": 1,
        "a": 1,
-       "p": 6.3
+       "p": 6.1
       }
      ],
-     "over25": 55.9,
-     "btts": 33.9,
+     "over25": 54.4,
+     "btts": 32.6,
      "scorersHome": [
       {
        "player": "Daniel Mu\u00f1oz",
-       "pScore": 63.0
+       "pScore": 62.3
       },
       {
        "player": "Jaminton Campaz",
-       "pScore": 39.1
+       "pScore": 38.6
       },
       {
        "player": "Jhon Arias",
-       "pScore": 39.1
+       "pScore": 38.6
       },
       {
        "player": "Luis D\u00edaz",
-       "pScore": 39.1
+       "pScore": 38.6
       }
      ],
      "scorersAway": [
       {
        "player": "Caleb Yirenkyi",
-       "pScore": 20.6
+       "pScore": 19.9
       },
       {
        "player": "Derrick Luckassen",
-       "pScore": 20.6
+       "pScore": 19.9
       }
      ],
-     "eloHome": 1980,
+     "eloHome": 1976,
      "eloAway": 1623
     },
-    "pHome": 93.7,
-    "pAway": 6.3,
+    "pHome": 94.0,
+    "pAway": 6.0,
     "predicted": "Colombia"
    },
    {
@@ -2059,7 +2059,7 @@
       }
      ],
      "over25": 54.3,
-     "btts": 44.5,
+     "btts": 44.4,
      "scorersHome": [
       {
        "player": "Jonathan David",
@@ -2128,7 +2128,7 @@
       {
        "h": 0,
        "a": 2,
-       "p": 14.6
+       "p": 14.7
       },
       {
        "h": 0,
@@ -2238,7 +2238,7 @@
        "p": 7.3
       }
      ],
-     "over25": 51.6,
+     "over25": 51.5,
      "btts": 55.0,
      "scorersHome": [
       {
@@ -2499,7 +2499,7 @@
       {
        "h": 1,
        "a": 2,
-       "p": 9.3
+       "p": 9.2
       },
       {
        "h": 1,
@@ -2596,7 +2596,7 @@
       {
        "h": 3,
        "a": 0,
-       "p": 11.5
+       "p": 11.4
       },
       {
        "h": 2,
@@ -2611,10 +2611,10 @@
       {
        "h": 3,
        "a": 1,
-       "p": 7.2
+       "p": 7.1
       }
      ],
-     "over25": 58.7,
+     "over25": 58.6,
      "btts": 42.4,
      "scorersHome": [
       {
@@ -2670,87 +2670,87 @@
     "away": "Colombia",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.02,
-     "xgAway": 1.3,
+     "xgHome": 0.95,
+     "xgAway": 1.19,
      "topScorelines": [
       {
-       "h": 1,
-       "a": 1,
-       "p": 13.0
-      },
-      {
        "h": 0,
        "a": 1,
-       "p": 12.8
+       "p": 14.0
       },
       {
        "h": 1,
-       "a": 0,
-       "p": 10.0
+       "a": 1,
+       "p": 13.3
       },
       {
        "h": 0,
        "a": 0,
-       "p": 9.8
+       "p": 11.8
       },
       {
        "h": 1,
-       "a": 2,
-       "p": 8.5
+       "a": 0,
+       "p": 11.2
       },
       {
        "h": 0,
        "a": 2,
        "p": 8.3
+      },
+      {
+       "h": 1,
+       "a": 2,
+       "p": 7.9
       }
      ],
-     "over25": 40.9,
-     "btts": 46.5,
+     "over25": 36.1,
+     "btts": 42.6,
      "scorersHome": [
       {
        "player": "Johan Manzambi",
-       "pScore": 28.8
+       "pScore": 27.1
       },
       {
        "player": "Breel Embolo",
-       "pScore": 20.2
+       "pScore": 19.0
       },
       {
        "player": "Ruben Vargas",
-       "pScore": 20.2
+       "pScore": 19.0
       },
       {
        "player": "Dan Ndoye",
-       "pScore": 10.7
+       "pScore": 10.0
       },
       {
        "player": "Granit Xhaka",
-       "pScore": 10.7
+       "pScore": 10.0
       }
      ],
      "scorersAway": [
       {
        "player": "Daniel Mu\u00f1oz",
-       "pScore": 40.6
+       "pScore": 37.9
       },
       {
        "player": "Jaminton Campaz",
-       "pScore": 22.9
+       "pScore": 21.2
       },
       {
        "player": "Jhon Arias",
-       "pScore": 22.9
+       "pScore": 21.2
       },
       {
        "player": "Luis D\u00edaz",
-       "pScore": 22.9
+       "pScore": 21.2
       }
      ],
-     "eloHome": 1934,
-     "eloAway": 1980
+     "eloHome": 1938,
+     "eloAway": 1976
     },
-    "pHome": 43.1,
-    "pAway": 56.9,
+    "pHome": 45.5,
+    "pAway": 54.5,
     "predicted": "Colombia"
    }
   ],
@@ -2827,7 +2827,7 @@
      "scorersAway": [
       {
        "player": "Kylian Mbapp\u00e9",
-       "pScore": 52.2
+       "pScore": 52.1
       },
       {
        "player": "Ousmane Demb\u00e9l\u00e9",
@@ -2965,7 +2965,7 @@
       {
        "h": 0,
        "a": 1,
-       "p": 10.3
+       "p": 10.4
       },
       {
        "h": 1,
@@ -3029,8 +3029,8 @@
      "eloHome": 1944,
      "eloAway": 2028
     },
-    "pHome": 55.9,
-    "pAway": 44.1,
+    "pHome": 55.8,
+    "pAway": 44.2,
     "predicted": "Brazil"
    },
    {
@@ -3040,18 +3040,18 @@
     "away": "Colombia",
     "status": "SCHEDULED",
     "detail": {
-     "xgHome": 1.64,
-     "xgAway": 0.88,
+     "xgHome": 1.57,
+     "xgAway": 0.87,
      "topScorelines": [
       {
        "h": 1,
        "a": 0,
-       "p": 13.2
+       "p": 13.7
       },
       {
        "h": 1,
        "a": 1,
-       "p": 11.6
+       "p": 11.9
       },
       {
        "h": 2,
@@ -3061,62 +3061,62 @@
       {
        "h": 2,
        "a": 1,
-       "p": 9.5
+       "p": 9.4
       },
       {
        "h": 0,
        "a": 0,
-       "p": 8.0
+       "p": 8.7
       },
       {
        "h": 0,
        "a": 1,
-       "p": 7.1
+       "p": 7.6
       }
      ],
-     "over25": 46.1,
-     "btts": 47.3,
+     "over25": 43.9,
+     "btts": 45.9,
      "scorersHome": [
       {
        "player": "Lionel Messi",
-       "pScore": 68.3
+       "pScore": 66.7
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 15.1
+       "pScore": 14.5
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 15.1
+       "pScore": 14.5
       },
       {
        "player": "Lisandro Mart\u00ednez",
-       "pScore": 15.1
+       "pScore": 14.5
       }
      ],
      "scorersAway": [
       {
        "player": "Daniel Mu\u00f1oz",
-       "pScore": 29.8
+       "pScore": 29.3
       },
       {
        "player": "Jaminton Campaz",
-       "pScore": 16.2
+       "pScore": 15.9
       },
       {
        "player": "Jhon Arias",
-       "pScore": 16.2
+       "pScore": 15.9
       },
       {
        "player": "Luis D\u00edaz",
-       "pScore": 16.2
+       "pScore": 15.9
       }
      ],
      "eloHome": 2098,
-     "eloAway": 1980
+     "eloAway": 1976
     },
-    "pHome": 74.3,
-    "pAway": 25.7,
+    "pHome": 73.3,
+    "pAway": 26.7,
     "predicted": "Argentina"
    }
   ],
@@ -3162,12 +3162,12 @@
        "p": 7.4
       }
      ],
-     "over25": 41.1,
+     "over25": 41.0,
      "btts": 47.2,
      "scorersHome": [
       {
        "player": "Kylian Mbapp\u00e9",
-       "pScore": 42.8
+       "pScore": 42.7
       },
       {
        "player": "Ousmane Demb\u00e9l\u00e9",
@@ -3219,7 +3219,7 @@
     "status": "SCHEDULED",
     "detail": {
      "xgHome": 0.95,
-     "xgAway": 2.01,
+     "xgAway": 2.0,
      "topScorelines": [
       {
        "h": 0,
@@ -3229,7 +3229,7 @@
       {
        "h": 0,
        "a": 1,
-       "p": 10.4
+       "p": 10.5
       },
       {
        "h": 1,
@@ -3252,8 +3252,8 @@
        "p": 6.7
       }
      ],
-     "over25": 56.6,
-     "btts": 53.2,
+     "over25": 56.5,
+     "btts": 53.1,
      "scorersHome": [
       {
        "player": "Vinicius J\u00fanior",
@@ -3348,11 +3348,11 @@
     "scorersHome": [
      {
       "player": "Kylian Mbapp\u00e9",
-      "pScore": 44.4
+      "pScore": 44.3
      },
      {
       "player": "Ousmane Demb\u00e9l\u00e9",
-      "pScore": 28.5
+      "pScore": 28.4
      },
      {
       "player": "Bradley Barcola",
@@ -3391,19 +3391,19 @@
  },
  "champion_probs": {
   "Argentina": 23.8,
-  "France": 18.8,
+  "France": 20.3,
   "Spain": 18.6,
-  "Morocco": 10.4,
-  "Brazil": 8.2,
-  "England": 5.6,
-  "Belgium": 4.6,
-  "Colombia": 2.7,
-  "Portugal": 2.6,
-  "Mexico": 2.3,
-  "Norway": 1.4,
-  "Switzerland": 0.6,
-  "Egypt": 0.2,
+  "Morocco": 9.7,
+  "Brazil": 7.9,
+  "England": 5.4,
+  "Belgium": 3.6,
+  "Colombia": 2.8,
+  "Portugal": 2.4,
+  "Mexico": 2.1,
+  "Norway": 1.6,
+  "Switzerland": 1.1,
+  "Egypt": 0.3,
   "Canada": 0.1,
-  "Paraguay": 0.0
+  "Paraguay": 0.1
  }
 }
