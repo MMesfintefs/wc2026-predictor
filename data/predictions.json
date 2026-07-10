@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-10T02:05:10.186744+00:00",
+ "generated_at": "2026-07-10T09:23:55.778566+00:00",
  "methodology": {
   "candidates_compared": [
    {
@@ -19,9 +19,9 @@
    {
     "model": "RandomForest",
     "holdout_matches": 102,
-    "accuracy": 59.8,
-    "log_loss": 0.9019,
-    "brier": 0.5308
+    "accuracy": 60.8,
+    "log_loss": 0.9006,
+    "brier": 0.5299
    },
    {
     "model": "ExtraTrees",
@@ -33,9 +33,9 @@
    {
     "model": "BaggedTrees",
     "holdout_matches": 102,
-    "accuracy": 61.8,
-    "log_loss": 0.9208,
-    "brier": 0.5439
+    "accuracy": 62.7,
+    "log_loss": 0.9211,
+    "brier": 0.5442
    },
    {
     "model": "GradientBoosting",
@@ -47,9 +47,9 @@
    {
     "model": "HistGradBoost",
     "holdout_matches": 102,
-    "accuracy": 62.7,
-    "log_loss": 0.9193,
-    "brier": 0.5371
+    "accuracy": 56.9,
+    "log_loss": 0.9275,
+    "brier": 0.5437
    },
    {
     "model": "KNN(k=75)",
@@ -69,22 +69,22 @@
     "model": "NeuralNet-MLP",
     "holdout_matches": 102,
     "accuracy": 62.7,
-    "log_loss": 0.9018,
-    "brier": 0.5305
+    "log_loss": 0.9019,
+    "brier": 0.5306
    },
    {
     "model": "XGBoost",
     "holdout_matches": 102,
-    "accuracy": 53.9,
-    "log_loss": 0.9922,
-    "brier": 0.576
+    "accuracy": 54.9,
+    "log_loss": 0.9885,
+    "brier": 0.5736
    },
    {
     "model": "Ensemble(soft-vote)",
     "holdout_matches": 102,
     "accuracy": 63.7,
-    "log_loss": 0.8998,
-    "brier": 0.5296
+    "log_loss": 0.9005,
+    "brier": 0.5305
    },
    {
     "model": "PoissonGoals(ref)",
@@ -3438,20 +3438,21 @@
   }
  },
  "champion_probs": {
-  "France": 36.4,
-  "Argentina": 19.1,
-  "Spain": 14.9,
-  "Brazil": 6.8,
-  "Morocco": 5.6,
-  "England": 5.0,
-  "Belgium": 3.6,
-  "Portugal": 2.4,
-  "Colombia": 2.0,
+  "France": 36.1,
+  "Argentina": 19.8,
+  "Spain": 14.6,
+  "Brazil": 7.2,
+  "Morocco": 5.9,
+  "England": 4.6,
+  "Belgium": 3.4,
+  "Colombia": 2.2,
+  "Portugal": 2.1,
   "Mexico": 1.8,
-  "Norway": 1.1,
-  "Switzerland": 0.9,
-  "Egypt": 0.3,
+  "Norway": 1.2,
+  "Switzerland": 0.8,
+  "Egypt": 0.2,
   "Paraguay": 0.1,
-  "Canada": 0.0
+  "Canada": 0.1,
+  "United States": 0.0
  }
 }
