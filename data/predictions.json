@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-11T07:45:16.569623+00:00",
+ "generated_at": "2026-07-11T13:01:18.649569+00:00",
  "methodology": {
   "candidates_compared": [
    {
@@ -19,9 +19,9 @@
    {
     "model": "RandomForest",
     "holdout_matches": 102,
-    "accuracy": 58.8,
-    "log_loss": 0.901,
-    "brier": 0.5304
+    "accuracy": 59.8,
+    "log_loss": 0.9016,
+    "brier": 0.531
    },
    {
     "model": "ExtraTrees",
@@ -33,9 +33,9 @@
    {
     "model": "BaggedTrees",
     "holdout_matches": 102,
-    "accuracy": 62.7,
-    "log_loss": 0.9247,
-    "brier": 0.547
+    "accuracy": 61.8,
+    "log_loss": 0.9201,
+    "brier": 0.5441
    },
    {
     "model": "GradientBoosting",
@@ -47,9 +47,9 @@
    {
     "model": "HistGradBoost",
     "holdout_matches": 102,
-    "accuracy": 59.8,
-    "log_loss": 0.932,
-    "brier": 0.5462
+    "accuracy": 63.7,
+    "log_loss": 0.9146,
+    "brier": 0.5362
    },
    {
     "model": "KNN(k=75)",
@@ -62,29 +62,29 @@
     "model": "SVM-RBF",
     "holdout_matches": 102,
     "accuracy": 60.8,
-    "log_loss": 0.8986,
-    "brier": 0.528
+    "log_loss": 0.8988,
+    "brier": 0.5281
    },
    {
     "model": "NeuralNet-MLP",
     "holdout_matches": 102,
     "accuracy": 62.7,
-    "log_loss": 0.9012,
-    "brier": 0.53
+    "log_loss": 0.907,
+    "brier": 0.5373
    },
    {
     "model": "XGBoost",
     "holdout_matches": 102,
-    "accuracy": 56.9,
-    "log_loss": 1.0034,
-    "brier": 0.5828
+    "accuracy": 53.9,
+    "log_loss": 0.9912,
+    "brier": 0.5778
    },
    {
     "model": "Ensemble(soft-vote)",
     "holdout_matches": 102,
-    "accuracy": 63.7,
-    "log_loss": 0.9042,
-    "brier": 0.5332
+    "accuracy": 62.7,
+    "log_loss": 0.8976,
+    "brier": 0.5298
    },
    {
     "model": "PoissonGoals(ref)",
@@ -3438,20 +3438,20 @@
   }
  },
  "champion_probs": {
-  "France": 33.7,
-  "Argentina": 19.7,
-  "Spain": 18.6,
+  "France": 35.3,
+  "Argentina": 19.4,
+  "Spain": 18.3,
   "Brazil": 6.8,
-  "Morocco": 4.9,
-  "England": 3.9,
-  "Portugal": 2.9,
+  "Morocco": 5.4,
+  "England": 4.2,
   "Belgium": 2.8,
-  "Colombia": 2.5,
-  "Mexico": 2.0,
-  "Norway": 1.1,
-  "Switzerland": 0.8,
-  "Egypt": 0.2,
+  "Colombia": 2.3,
+  "Portugal": 1.9,
+  "Mexico": 1.4,
+  "Switzerland": 1.0,
+  "Norway": 1.0,
+  "Egypt": 0.1,
   "Canada": 0.1,
-  "United States": 0.0
+  "Paraguay": 0.0
  }
 }
