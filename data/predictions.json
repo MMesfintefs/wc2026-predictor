@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-11T13:01:18.649569+00:00",
+ "generated_at": "2026-07-11T18:50:13.893278+00:00",
  "methodology": {
   "candidates_compared": [
    {
@@ -3438,20 +3438,21 @@
   }
  },
  "champion_probs": {
-  "France": 35.3,
+  "France": 34.2,
   "Argentina": 19.4,
-  "Spain": 18.3,
-  "Brazil": 6.8,
+  "Spain": 18.1,
+  "Brazil": 6.6,
   "Morocco": 5.4,
-  "England": 4.2,
-  "Belgium": 2.8,
-  "Colombia": 2.3,
-  "Portugal": 1.9,
-  "Mexico": 1.4,
-  "Switzerland": 1.0,
-  "Norway": 1.0,
-  "Egypt": 0.1,
+  "England": 4.5,
+  "Belgium": 3.0,
+  "Colombia": 2.4,
+  "Portugal": 2.1,
+  "Mexico": 2.0,
+  "Norway": 1.1,
+  "Switzerland": 0.9,
+  "Egypt": 0.2,
   "Canada": 0.1,
-  "Paraguay": 0.0
+  "Paraguay": 0.0,
+  "United States": 0.0
  }
 }
