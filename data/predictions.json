@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-17T01:53:59.930959+00:00",
+ "generated_at": "2026-07-17T07:56:36.692570+00:00",
  "methodology": {
   "candidates_compared": [
    {
@@ -1274,15 +1274,19 @@
      "scorersHome": [
       {
        "player": "Harry Kane",
-       "pScore": 62.2
+       "pScore": 59.5
       },
       {
        "player": "Jude Bellingham",
-       "pScore": 62.2
+       "pScore": 59.5
+      },
+      {
+       "player": "Anthony Gordon",
+       "pScore": 14.0
       },
       {
        "player": "Marcus Rashford",
-       "pScore": 15.0
+       "pScore": 14.0
       }
      ],
      "scorersAway": [
@@ -1817,27 +1821,27 @@
      "scorersHome": [
       {
        "player": "Lionel Messi",
-       "pScore": 90.3
+       "pScore": 87.0
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 44.2
-      },
-      {
-       "player": "Alexis Mac Allister",
-       "pScore": 25.3
-      },
-      {
-       "player": "Cristian Romero",
-       "pScore": 25.3
+       "pScore": 53.5
       },
       {
        "player": "Enzo Fern\u00e1ndez",
-       "pScore": 25.3
+       "pScore": 40.0
+      },
+      {
+       "player": "Alexis Mac Allister",
+       "pScore": 22.5
+      },
+      {
+       "player": "Cristian Romero",
+       "pScore": 22.5
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 25.3
+       "pScore": 22.5
       }
      ],
      "scorersAway": [
@@ -2383,15 +2387,19 @@
      "scorersAway": [
       {
        "player": "Harry Kane",
-       "pScore": 49.2
+       "pScore": 46.7
       },
       {
        "player": "Jude Bellingham",
-       "pScore": 49.2
+       "pScore": 46.7
+      },
+      {
+       "player": "Anthony Gordon",
+       "pScore": 9.9
       },
       {
        "player": "Marcus Rashford",
-       "pScore": 10.7
+       "pScore": 9.9
       }
      ],
      "eloHome": 1933,
@@ -2647,27 +2655,27 @@
      "scorersHome": [
       {
        "player": "Lionel Messi",
-       "pScore": 78.9
+       "pScore": 74.4
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 32.2
-      },
-      {
-       "player": "Alexis Mac Allister",
-       "pScore": 17.7
-      },
-      {
-       "player": "Cristian Romero",
-       "pScore": 17.7
+       "pScore": 40.0
       },
       {
        "player": "Enzo Fern\u00e1ndez",
-       "pScore": 17.7
+       "pScore": 28.9
+      },
+      {
+       "player": "Alexis Mac Allister",
+       "pScore": 15.7
+      },
+      {
+       "player": "Cristian Romero",
+       "pScore": 15.7
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 17.7
+       "pScore": 15.7
       }
      ],
      "scorersAway": [
@@ -3059,15 +3067,19 @@
      "scorersAway": [
       {
        "player": "Harry Kane",
-       "pScore": 49.9
+       "pScore": 47.3
       },
       {
        "player": "Jude Bellingham",
-       "pScore": 49.9
+       "pScore": 47.3
+      },
+      {
+       "player": "Anthony Gordon",
+       "pScore": 10.1
       },
       {
        "player": "Marcus Rashford",
-       "pScore": 10.9
+       "pScore": 10.1
       }
      ],
      "eloHome": 1944,
@@ -3123,27 +3135,27 @@
      "scorersHome": [
       {
        "player": "Lionel Messi",
-       "pScore": 63.3
+       "pScore": 58.4
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 22.2
-      },
-      {
-       "player": "Alexis Mac Allister",
-       "pScore": 11.8
-      },
-      {
-       "player": "Cristian Romero",
-       "pScore": 11.8
+       "pScore": 28.0
       },
       {
        "player": "Enzo Fern\u00e1ndez",
-       "pScore": 11.8
+       "pScore": 19.7
+      },
+      {
+       "player": "Alexis Mac Allister",
+       "pScore": 10.4
+      },
+      {
+       "player": "Cristian Romero",
+       "pScore": 10.4
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 11.8
+       "pScore": 10.4
       }
      ],
      "scorersAway": [
@@ -3335,27 +3347,27 @@
      "scorersAway": [
       {
        "player": "Lionel Messi",
-       "pScore": 72.2
+       "pScore": 67.4
       },
       {
        "player": "Lautaro Mart\u00ednez",
-       "pScore": 27.4
-      },
-      {
-       "player": "Alexis Mac Allister",
-       "pScore": 14.8
-      },
-      {
-       "player": "Cristian Romero",
-       "pScore": 14.8
+       "pScore": 34.3
       },
       {
        "player": "Enzo Fern\u00e1ndez",
-       "pScore": 14.8
+       "pScore": 24.4
+      },
+      {
+       "player": "Alexis Mac Allister",
+       "pScore": 13.1
+      },
+      {
+       "player": "Cristian Romero",
+       "pScore": 13.1
       },
       {
        "player": "Giovani Lo Celso",
-       "pScore": 14.8
+       "pScore": 13.1
       }
      ],
      "eloHome": 1944,
@@ -3438,27 +3450,27 @@
     "scorersAway": [
      {
       "player": "Lionel Messi",
-      "pScore": 52.8
+      "pScore": 48.1
      },
      {
       "player": "Lautaro Mart\u00ednez",
-      "pScore": 17.1
-     },
-     {
-      "player": "Alexis Mac Allister",
-      "pScore": 8.9
-     },
-     {
-      "player": "Cristian Romero",
-      "pScore": 8.9
+      "pScore": 21.8
      },
      {
       "player": "Enzo Fern\u00e1ndez",
-      "pScore": 8.9
+      "pScore": 15.1
+     },
+     {
+      "player": "Alexis Mac Allister",
+      "pScore": 7.9
+     },
+     {
+      "player": "Cristian Romero",
+      "pScore": 7.9
      },
      {
       "player": "Giovani Lo Celso",
-      "pScore": 8.9
+      "pScore": 7.9
      }
     ],
     "eloHome": 2155,
@@ -3470,19 +3482,20 @@
   }
  },
  "champion_probs": {
-  "Argentina": 37.2,
-  "Spain": 25.2,
-  "France": 20.4,
-  "Brazil": 3.9,
-  "England": 3.8,
-  "Morocco": 3.1,
-  "Belgium": 1.8,
-  "Colombia": 1.6,
-  "Mexico": 1.0,
-  "Portugal": 1.0,
+  "Argentina": 38.1,
+  "Spain": 24.9,
+  "France": 20.1,
+  "Brazil": 4.0,
+  "Morocco": 3.5,
+  "England": 3.0,
+  "Belgium": 2.0,
+  "Colombia": 1.4,
+  "Portugal": 1.3,
+  "Mexico": 0.9,
   "Norway": 0.5,
   "Switzerland": 0.2,
   "Egypt": 0.1,
+  "Canada": 0.0,
   "Paraguay": 0.0
  }
 }
