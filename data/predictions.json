@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-09T18:29:47.963465+00:00",
+ "generated_at": "2026-08-10T01:06:05.362964+00:00",
  "methodology": {
   "candidates_compared": [
    {
@@ -2225,8 +2225,8 @@
      "eloHome": 1731,
      "eloAway": 2008
     },
-    "pHome": 12.4,
-    "pAway": 87.6,
+    "pHome": 12.3,
+    "pAway": 87.7,
     "predicted": "France"
    },
    {
@@ -2323,8 +2323,8 @@
      "eloHome": 1944,
      "eloAway": 1913
     },
-    "pHome": 70.1,
-    "pAway": 29.9,
+    "pHome": 70.0,
+    "pAway": 30.0,
     "predicted": "Brazil"
    },
    {
@@ -2421,8 +2421,8 @@
      "eloHome": 1933,
      "eloAway": 2074
     },
-    "pHome": 34.2,
-    "pAway": 65.8,
+    "pHome": 34.1,
+    "pAway": 65.9,
     "predicted": "England"
    },
    {
@@ -2813,8 +2813,8 @@
      "eloHome": 1883,
      "eloAway": 1976
     },
-    "pHome": 40.3,
-    "pAway": 59.7,
+    "pHome": 40.4,
+    "pAway": 59.6,
     "predicted": "Colombia"
    }
   ],
@@ -2909,8 +2909,8 @@
      "eloHome": 1971,
      "eloAway": 2008
     },
-    "pHome": 40.7,
-    "pAway": 59.3,
+    "pHome": 40.6,
+    "pAway": 59.4,
     "predicted": "France"
    },
    {
@@ -3011,8 +3011,8 @@
      "eloHome": 2186,
      "eloAway": 1930
     },
-    "pHome": 88.2,
-    "pAway": 11.8,
+    "pHome": 88.3,
+    "pAway": 11.7,
     "predicted": "Spain"
    },
    {
@@ -3109,8 +3109,8 @@
      "eloHome": 1944,
      "eloAway": 2074
     },
-    "pHome": 43.4,
-    "pAway": 56.6,
+    "pHome": 43.3,
+    "pAway": 56.7,
     "predicted": "England"
    },
    {
@@ -3510,20 +3510,19 @@
   }
  },
  "champion_probs": {
-  "Spain": 38.8,
-  "Argentina": 29.9,
-  "France": 11.5,
-  "England": 7.0,
-  "Morocco": 3.8,
+  "Spain": 40.5,
+  "Argentina": 27.8,
+  "France": 10.9,
+  "England": 7.2,
+  "Morocco": 3.7,
   "Brazil": 3.5,
-  "Belgium": 1.6,
-  "Colombia": 1.3,
-  "Portugal": 1.1,
-  "Mexico": 0.6,
+  "Belgium": 1.9,
+  "Colombia": 1.4,
+  "Portugal": 1.3,
+  "Mexico": 1.0,
   "Norway": 0.5,
-  "Switzerland": 0.3,
-  "Canada": 0.1,
-  "Egypt": 0.0,
-  "United States": 0.0
+  "Switzerland": 0.2,
+  "Egypt": 0.2,
+  "Paraguay": 0.1
  }
 }
