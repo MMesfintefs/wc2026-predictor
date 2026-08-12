@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-11T18:52:01.304292+00:00",
+ "generated_at": "2026-08-12T01:12:28.306588+00:00",
  "methodology": {
   "candidates_compared": [
    {
@@ -2225,8 +2225,8 @@
      "eloHome": 1731,
      "eloAway": 2008
     },
-    "pHome": 12.3,
-    "pAway": 87.7,
+    "pHome": 12.2,
+    "pAway": 87.8,
     "predicted": "France"
    },
    {
@@ -2421,8 +2421,8 @@
      "eloHome": 1933,
      "eloAway": 2074
     },
-    "pHome": 34.0,
-    "pAway": 66.0,
+    "pHome": 33.9,
+    "pAway": 66.1,
     "predicted": "England"
    },
    {
@@ -2909,8 +2909,8 @@
      "eloHome": 1971,
      "eloAway": 2008
     },
-    "pHome": 40.5,
-    "pAway": 59.5,
+    "pHome": 40.4,
+    "pAway": 59.6,
     "predicted": "France"
    },
    {
@@ -3011,8 +3011,8 @@
      "eloHome": 2186,
      "eloAway": 1930
     },
-    "pHome": 88.3,
-    "pAway": 11.7,
+    "pHome": 88.4,
+    "pAway": 11.6,
     "predicted": "Spain"
    },
    {
@@ -3109,8 +3109,8 @@
      "eloHome": 1944,
      "eloAway": 2074
     },
-    "pHome": 43.2,
-    "pAway": 56.8,
+    "pHome": 43.1,
+    "pAway": 56.9,
     "predicted": "England"
    },
    {
@@ -3203,8 +3203,8 @@
      "eloHome": 2126,
      "eloAway": 1976
     },
-    "pHome": 83.0,
-    "pAway": 17.0,
+    "pHome": 83.1,
+    "pAway": 16.9,
     "predicted": "Argentina"
    }
   ],
@@ -3510,18 +3510,20 @@
   }
  },
  "champion_probs": {
-  "Spain": 39.0,
-  "Argentina": 29.3,
-  "France": 12.3,
-  "England": 7.4,
-  "Brazil": 3.6,
-  "Morocco": 3.1,
-  "Belgium": 1.7,
-  "Colombia": 1.1,
-  "Portugal": 1.0,
-  "Mexico": 0.6,
+  "Spain": 39.3,
+  "Argentina": 29.5,
+  "France": 11.3,
+  "England": 7.2,
+  "Morocco": 3.6,
+  "Brazil": 3.4,
+  "Portugal": 1.4,
+  "Belgium": 1.4,
+  "Colombia": 1.2,
+  "Mexico": 0.7,
   "Norway": 0.5,
   "Switzerland": 0.2,
-  "Egypt": 0.1
+  "Egypt": 0.1,
+  "Canada": 0.0,
+  "Paraguay": 0.0
  }
 }
