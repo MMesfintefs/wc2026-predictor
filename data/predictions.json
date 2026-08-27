@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-08-26T19:42:45.953466+00:00",
+ "generated_at": "2026-08-27T05:55:31.651081+00:00",
  "methodology": {
   "candidates_compared": [
    {
     "model": "LogisticRegression",
     "holdout_matches": 102,
     "accuracy": 62.7,
-    "log_loss": 0.869,
+    "log_loss": 0.8691,
     "brier": 0.5162
    },
    {
@@ -20,71 +20,71 @@
     "model": "RandomForest",
     "holdout_matches": 102,
     "accuracy": 59.8,
-    "log_loss": 0.9019,
-    "brier": 0.5315
+    "log_loss": 0.9051,
+    "brier": 0.5335
    },
    {
     "model": "ExtraTrees",
     "holdout_matches": 102,
     "accuracy": 62.7,
-    "log_loss": 0.8998,
-    "brier": 0.5275
+    "log_loss": 0.8989,
+    "brier": 0.5269
    },
    {
     "model": "BaggedTrees",
     "holdout_matches": 102,
-    "accuracy": 59.8,
-    "log_loss": 0.9279,
-    "brier": 0.5491
+    "accuracy": 60.8,
+    "log_loss": 0.9221,
+    "brier": 0.5451
    },
    {
     "model": "GradientBoosting",
     "holdout_matches": 102,
-    "accuracy": 60.8,
-    "log_loss": 0.9037,
-    "brier": 0.5316
+    "accuracy": 57.8,
+    "log_loss": 0.9135,
+    "brier": 0.5389
    },
    {
     "model": "HistGradBoost",
     "holdout_matches": 102,
     "accuracy": 57.8,
-    "log_loss": 0.9266,
-    "brier": 0.5455
+    "log_loss": 0.9331,
+    "brier": 0.5488
    },
    {
     "model": "KNN(k=75)",
     "holdout_matches": 102,
     "accuracy": 58.8,
-    "log_loss": 0.9221,
-    "brier": 0.5465
+    "log_loss": 0.9225,
+    "brier": 0.5468
    },
    {
     "model": "SVM-RBF",
     "holdout_matches": 102,
     "accuracy": 60.8,
-    "log_loss": 0.898,
-    "brier": 0.5279
+    "log_loss": 0.8985,
+    "brier": 0.5282
    },
    {
     "model": "NeuralNet-MLP",
     "holdout_matches": 102,
-    "accuracy": 59.8,
-    "log_loss": 0.9178,
-    "brier": 0.5432
+    "accuracy": 60.8,
+    "log_loss": 0.9185,
+    "brier": 0.5434
    },
    {
     "model": "XGBoost",
     "holdout_matches": 102,
     "accuracy": 53.9,
-    "log_loss": 0.9855,
-    "brier": 0.5748
+    "log_loss": 0.9862,
+    "brier": 0.5723
    },
    {
     "model": "Ensemble(soft-vote)",
     "holdout_matches": 102,
     "accuracy": 60.8,
-    "log_loss": 0.8992,
-    "brier": 0.5308
+    "log_loss": 0.9003,
+    "brier": 0.5311
    },
    {
     "model": "PoissonGoals(ref)",
@@ -705,7 +705,7 @@
        "p": 6.4
       }
      ],
-     "over25": 53.1,
+     "over25": 53.0,
      "btts": 50.0,
      "scorersHome": [
       {
@@ -910,7 +910,7 @@
       },
       {
        "player": "Matheus Cunha",
-       "pScore": 33.5
+       "pScore": 33.4
       },
       {
        "player": "Casemiro",
@@ -1002,7 +1002,7 @@
       }
      ],
      "over25": 68.2,
-     "btts": 48.6,
+     "btts": 48.7,
      "scorersHome": [
       {
        "player": "Kylian Mbapp\u00e9",
@@ -1198,15 +1198,15 @@
       },
       {
        "player": "Luis Romo",
-       "pScore": 15.9
+       "pScore": 15.8
       },
       {
        "player": "Mateo Ch\u00e1vez",
-       "pScore": 15.9
+       "pScore": 15.8
       },
       {
        "player": "\u00c1lvaro Fidalgo",
-       "pScore": 15.9
+       "pScore": 15.8
       }
      ],
      "scorersAway": [
@@ -1235,7 +1235,7 @@
     "status": "FT",
     "date": "Jul 1",
     "detail": {
-     "xgHome": 2.45,
+     "xgHome": 2.44,
      "xgAway": 0.63,
      "topScorelines": [
       {
@@ -1445,19 +1445,19 @@
      "scorersHome": [
       {
        "player": "Charles De Ketelaere",
-       "pScore": 40.7
+       "pScore": 40.8
       },
       {
        "player": "Romelu Lukaku",
-       "pScore": 40.7
+       "pScore": 40.8
       },
       {
        "player": "Leandro Trossard",
-       "pScore": 29.4
+       "pScore": 29.5
       },
       {
        "player": "Youri Tielemans",
-       "pScore": 29.4
+       "pScore": 29.5
       },
       {
        "player": "Alexis Saelemaekers",
@@ -1641,7 +1641,7 @@
       }
      ],
      "over25": 63.4,
-     "btts": 37.1,
+     "btts": 37.0,
      "scorersHome": [
       {
        "player": "Mikel Oyarzabal",
@@ -2004,7 +2004,7 @@
        "p": 7.3
       }
      ],
-     "over25": 35.1,
+     "over25": 35.0,
      "btts": 42.2,
      "scorersHome": [
       {
@@ -2019,11 +2019,11 @@
      "scorersAway": [
       {
        "player": "Emam Ashour",
-       "pScore": 22.3
+       "pScore": 22.2
       },
       {
        "player": "Mostafa Ziko",
-       "pScore": 22.3
+       "pScore": 22.2
       },
       {
        "player": "Mahmoud Saber",
@@ -2121,11 +2121,11 @@
       },
       {
        "player": "Azzedine Ounahi",
-       "pScore": 32.7
+       "pScore": 32.6
       },
       {
        "player": "Soufiane Rahimi",
-       "pScore": 32.7
+       "pScore": 32.6
       },
       {
        "player": "Achraf Hakimi",
@@ -2279,7 +2279,7 @@
       },
       {
        "player": "Matheus Cunha",
-       "pScore": 37.9
+       "pScore": 38.0
       },
       {
        "player": "Casemiro",
@@ -2297,7 +2297,7 @@
      "scorersAway": [
       {
        "player": "Erling Haaland",
-       "pScore": 49.6
+       "pScore": 49.5
       },
       {
        "player": "Andreas Schjelderup",
@@ -2323,8 +2323,8 @@
      "eloHome": 1944,
      "eloAway": 1913
     },
-    "pHome": 70.0,
-    "pAway": 30.0,
+    "pHome": 69.9,
+    "pAway": 30.1,
     "predicted": "Brazil"
    },
    {
@@ -2395,15 +2395,15 @@
      "scorersAway": [
       {
        "player": "Jude Bellingham",
-       "pScore": 46.6
+       "pScore": 46.5
       },
       {
        "player": "Harry Kane",
-       "pScore": 41.6
+       "pScore": 41.5
       },
       {
        "player": "Bukayo Saka",
-       "pScore": 23.6
+       "pScore": 23.5
       },
       {
        "player": "Anthony Gordon",
@@ -2421,8 +2421,8 @@
      "eloHome": 1933,
      "eloAway": 2074
     },
-    "pHome": 33.5,
-    "pAway": 66.5,
+    "pHome": 33.4,
+    "pAway": 66.6,
     "predicted": "England"
    },
    {
@@ -2448,7 +2448,7 @@
       {
        "h": 1,
        "a": 1,
-       "p": 9.6
+       "p": 9.7
       },
       {
        "h": 1,
@@ -2466,8 +2466,8 @@
        "p": 7.5
       }
      ],
-     "over25": 47.8,
-     "btts": 41.6,
+     "over25": 47.7,
+     "btts": 41.5,
      "scorersHome": [
       {
        "player": "Cristiano Ronaldo",
@@ -2493,7 +2493,7 @@
      "scorersAway": [
       {
        "player": "Mikel Oyarzabal",
-       "pScore": 55.2
+       "pScore": 55.1
       },
       {
        "player": "Mikel Merino",
@@ -2519,8 +2519,8 @@
      "eloHome": 1914,
      "eloAway": 2186
     },
-    "pHome": 16.8,
-    "pAway": 83.2,
+    "pHome": 16.7,
+    "pAway": 83.3,
     "predicted": "Spain"
    },
    {
@@ -2544,13 +2544,13 @@
        "p": 9.6
       },
       {
-       "h": 1,
-       "a": 2,
+       "h": 0,
+       "a": 3,
        "p": 9.5
       },
       {
-       "h": 0,
-       "a": 3,
+       "h": 1,
+       "a": 2,
        "p": 9.5
       },
       {
@@ -2595,11 +2595,11 @@
      "scorersAway": [
       {
        "player": "Charles De Ketelaere",
-       "pScore": 45.5
+       "pScore": 45.6
       },
       {
        "player": "Romelu Lukaku",
-       "pScore": 45.5
+       "pScore": 45.6
       },
       {
        "player": "Leandro Trossard",
@@ -2621,8 +2621,8 @@
      "eloHome": 1717,
      "eloAway": 1930
     },
-    "pHome": 18.2,
-    "pAway": 81.8,
+    "pHome": 18.1,
+    "pAway": 81.9,
     "predicted": "Belgium"
    },
    {
@@ -2768,7 +2768,7 @@
        "p": 8.6
       }
      ],
-     "over25": 39.6,
+     "over25": 39.5,
      "btts": 43.1,
      "scorersHome": [
       {
@@ -2813,8 +2813,8 @@
      "eloHome": 1883,
      "eloAway": 1976
     },
-    "pHome": 40.5,
-    "pAway": 59.5,
+    "pHome": 40.4,
+    "pAway": 59.6,
     "predicted": "Colombia"
    }
   ],
@@ -3083,7 +3083,7 @@
      "scorersAway": [
       {
        "player": "Jude Bellingham",
-       "pScore": 47.3
+       "pScore": 47.2
       },
       {
        "player": "Harry Kane",
@@ -3109,8 +3109,8 @@
      "eloHome": 1944,
      "eloAway": 2074
     },
-    "pHome": 42.6,
-    "pAway": 57.4,
+    "pHome": 42.4,
+    "pAway": 57.6,
     "predicted": "England"
    },
    {
@@ -3203,8 +3203,8 @@
      "eloHome": 2126,
      "eloAway": 1976
     },
-    "pHome": 83.4,
-    "pAway": 16.6,
+    "pHome": 83.3,
+    "pAway": 16.7,
     "predicted": "Argentina"
    }
   ],
@@ -3259,7 +3259,7 @@
       },
       {
        "player": "Ousmane Demb\u00e9l\u00e9",
-       "pScore": 22.1
+       "pScore": 22.0
       },
       {
        "player": "Bradley Barcola",
@@ -3299,8 +3299,8 @@
      "eloHome": 2008,
      "eloAway": 2186
     },
-    "pHome": 31.3,
-    "pAway": 68.7,
+    "pHome": 31.1,
+    "pAway": 68.9,
     "predicted": "Spain"
    },
    {
@@ -3401,8 +3401,8 @@
      "eloHome": 2074,
      "eloAway": 2126
     },
-    "pHome": 39.5,
-    "pAway": 60.5,
+    "pHome": 39.4,
+    "pAway": 60.6,
     "predicted": "Argentina"
    }
   ],
@@ -3510,20 +3510,19 @@
   }
  },
  "champion_probs": {
-  "Spain": 39.5,
-  "Argentina": 30.5,
-  "France": 11.3,
-  "England": 6.2,
-  "Morocco": 3.6,
-  "Brazil": 3.2,
-  "Belgium": 1.7,
-  "Colombia": 1.2,
-  "Portugal": 1.0,
-  "Mexico": 1.0,
-  "Norway": 0.4,
-  "Switzerland": 0.2,
+  "Spain": 39.6,
+  "Argentina": 30.0,
+  "France": 11.2,
+  "England": 7.6,
+  "Brazil": 3.4,
+  "Morocco": 3.3,
+  "Belgium": 1.6,
+  "Portugal": 1.1,
+  "Colombia": 0.9,
+  "Mexico": 0.6,
+  "Norway": 0.5,
+  "Switzerland": 0.1,
   "Egypt": 0.1,
-  "Canada": 0.0,
-  "Paraguay": 0.0
+  "Canada": 0.0
  }
 }
