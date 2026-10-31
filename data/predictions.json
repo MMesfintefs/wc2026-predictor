@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T03:24:27.020329+00:00",
+ "generated_at": "2026-10-31T11:30:38.175183+00:00",
  "methodology": {
   "candidates_compared": [
    {
@@ -19,9 +19,9 @@
    {
     "model": "RandomForest",
     "holdout_matches": 102,
-    "accuracy": 62.7,
-    "log_loss": 0.9018,
-    "brier": 0.531
+    "accuracy": 61.8,
+    "log_loss": 0.9015,
+    "brier": 0.5307
    },
    {
     "model": "ExtraTrees",
@@ -33,30 +33,30 @@
    {
     "model": "BaggedTrees",
     "holdout_matches": 102,
-    "accuracy": 64.7,
-    "log_loss": 0.923,
-    "brier": 0.5464
+    "accuracy": 63.7,
+    "log_loss": 0.9221,
+    "brier": 0.5458
    },
    {
     "model": "GradientBoosting",
     "holdout_matches": 102,
-    "accuracy": 60.8,
-    "log_loss": 0.922,
-    "brier": 0.5431
+    "accuracy": 57.8,
+    "log_loss": 0.9166,
+    "brier": 0.5385
    },
    {
     "model": "HistGradBoost",
     "holdout_matches": 102,
     "accuracy": 58.8,
-    "log_loss": 0.94,
-    "brier": 0.5489
+    "log_loss": 0.9294,
+    "brier": 0.5426
    },
    {
     "model": "KNN(k=75)",
     "holdout_matches": 102,
     "accuracy": 57.8,
-    "log_loss": 0.922,
-    "brier": 0.547
+    "log_loss": 0.9223,
+    "brier": 0.5472
    },
    {
     "model": "SVM-RBF",
@@ -68,23 +68,23 @@
    {
     "model": "NeuralNet-MLP",
     "holdout_matches": 102,
-    "accuracy": 59.8,
-    "log_loss": 0.9255,
-    "brier": 0.5485
+    "accuracy": 58.8,
+    "log_loss": 0.926,
+    "brier": 0.5489
    },
    {
     "model": "XGBoost",
     "holdout_matches": 102,
     "accuracy": 54.9,
-    "log_loss": 0.9858,
-    "brier": 0.5758
+    "log_loss": 0.982,
+    "brier": 0.5738
    },
    {
     "model": "Ensemble(soft-vote)",
     "holdout_matches": 102,
     "accuracy": 62.7,
-    "log_loss": 0.9026,
-    "brier": 0.5324
+    "log_loss": 0.8993,
+    "brier": 0.5303
    },
    {
     "model": "PoissonGoals(ref)",
@@ -2564,7 +2564,7 @@
        "p": 6.7
       }
      ],
-     "over25": 57.1,
+     "over25": 57.2,
      "btts": 53.7,
      "scorersHome": [
       {
@@ -3247,7 +3247,7 @@
       {
        "h": 0,
        "a": 3,
-       "p": 6.4
+       "p": 6.5
       }
      ],
      "over25": 48.3,
@@ -3510,18 +3510,19 @@
   }
  },
  "champion_probs": {
-  "Spain": 40.9,
-  "Argentina": 23.8,
-  "France": 17.3,
-  "England": 12.0,
-  "Brazil": 1.9,
-  "Portugal": 1.5,
-  "Morocco": 1.0,
+  "Spain": 40.4,
+  "Argentina": 26.3,
+  "France": 16.4,
+  "England": 10.9,
+  "Brazil": 1.8,
+  "Morocco": 1.3,
+  "Portugal": 1.2,
+  "Belgium": 0.7,
   "Colombia": 0.6,
-  "Belgium": 0.6,
-  "Switzerland": 0.4,
+  "Switzerland": 0.2,
   "Norway": 0.1,
   "Mexico": 0.1,
-  "Paraguay": 0.0
+  "Canada": 0.0,
+  "Egypt": 0.0
  }
 }
