@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T22:46:23.987553+00:00",
+ "generated_at": "2026-11-04T04:01:59.423426+00:00",
  "methodology": {
   "candidates_compared": [
    {
@@ -1382,8 +1382,8 @@
      "eloHome": 1963,
      "eloAway": 1570
     },
-    "pHome": 95.3,
-    "pAway": 4.7,
+    "pHome": 95.4,
+    "pAway": 4.6,
     "predicted": "Colombia"
    },
    {
@@ -1494,8 +1494,8 @@
      "eloHome": 1754,
      "eloAway": 1969
     },
-    "pHome": 23.4,
-    "pAway": 76.6,
+    "pHome": 23.5,
+    "pAway": 76.5,
     "predicted": "Morocco"
    },
    {
@@ -1806,8 +1806,8 @@
      "eloHome": 2141,
      "eloAway": 1805
     },
-    "pHome": 95.8,
-    "pAway": 4.2,
+    "pHome": 95.9,
+    "pAway": 4.1,
     "predicted": "Argentina"
    },
    {
@@ -2233,18 +2233,18 @@
   }
  },
  "champion_probs": {
-  "Spain": 40.2,
-  "Argentina": 26.3,
-  "France": 16.3,
-  "England": 11.9,
+  "Spain": 39.8,
+  "Argentina": 27.1,
+  "France": 15.8,
+  "England": 12.0,
   "Brazil": 1.5,
-  "Morocco": 1.5,
-  "Portugal": 0.9,
-  "Belgium": 0.5,
+  "Portugal": 1.1,
+  "Morocco": 0.8,
+  "Belgium": 0.8,
   "Colombia": 0.5,
-  "Switzerland": 0.3,
+  "Switzerland": 0.4,
+  "Norway": 0.1,
   "Mexico": 0.1,
-  "Norway": 0.0,
-  "Paraguay": 0.0
+  "Canada": 0.0
  }
 }
